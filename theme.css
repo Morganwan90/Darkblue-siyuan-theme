@@ -184,8 +184,7 @@
 
     /**** 动画 ****/
     --page-scrollbar-transition: opacity 0.5s ease 0s; /* 分页加载条动画 */
-    --flex-column-transition:    width 0.2s cubic-bezier(0, 0.7, 0.4, 1); /* 侧边栏动画 */
-    --common-transition:         all 0.5s cubic-bezier(0, 0.7, .2, 1) 0ms;    /* 通用动画 */
+    --common-transition:         all 0.3s ease-in-out;    /* 通用动画 */
 }
 
 
@@ -345,17 +344,19 @@ backdrop-filter: blur(16px);
 .b3-dialog__container {
 	z-index: 2;
 
-  /**使用类透明背景***
-  background-color: #00000033;
+  /**使用毛玻璃背景***/
+  background-color: rgb(0 0 0 / 50%);
+  backdrop-filter: blur(--blur-value);
+  transition:all 0.3s linear;
 }
-  /**类透明背景结束**/
+  /**毛玻璃背景结束**/
   
-  /**使用图片背景，使用时关闭类透明背景**/
+  /**使用图片背景，使用时关闭类透明背景，会卡一点**
   background-image:var(--background-image);
   border-radius: 6px;
   background-position:center;
 	background-size:cover;
-  transition: var(--common-transition);
+  transition: all 0.3s linear;
 }
 /**图片背景结束**/
 
@@ -405,10 +406,18 @@ background: #00000005;
 
   /***弹出页面***/
 .block__popover {
+  /**使用毛玻璃背景***/
+  background-color: rgb(0 0 0 / 50%);
+  backdrop-filter: blur(--blur-value);
+  }
+    /**毛玻璃背景结束**/
+    
+  /**使用图片背景，使用时关闭类透明背景，会卡一点**
   background-image:var(--background-image);
   background-position: center;
   background-size: cover;
 }
+  /**图片背景结束**/
 
 .block__popover.block__popover--move.block__popover--open{
   margin: 0px auto;
@@ -445,10 +454,10 @@ background-color: var(--custom-components);
 }
 
 .b3-card {
-    box-shadow: var(--b3-point-shadow);
-    border: 1px solid rgb(0 0 0 / 33%);
-    background-color: #00000036;
-transition: all 0.2s ease-in-out;
+  box-shadow: var(--b3-point-shadow);
+  border: 1px solid rgb(0 0 0 / 33%);
+  background-color: #00000036;
+  transition: var(--common-transition);
 }
 /**修改结束**/
 
@@ -669,7 +678,7 @@ body.body--win32 {
   width:   0;
   height:  0;
   margin:  0;
-  transition: all 300ms ease 0s;
+  transition: var(--common-transition);
 }
 
 
@@ -754,6 +763,12 @@ body.body--win32 {
  background-color: var(--b3-theme-primary);
  color: var(--b3-theme-surface);
 }
+
+.fullscreen{
+  background-color: var(--glass-editor-background);
+  backdrop-filter: blur(20px);
+}
+
 
 /**** 其他 ****/
 /* 大文件分页加载条 */
@@ -1119,7 +1134,7 @@ border-bottom: 1px solid #596169 !important;
 }
 /* 圆点悬浮时放大效果（折叠时无效果） */
 .protyle-wysiwyg [data-node-id].li:not([fold="1"])>.protyle-action:hover svg, .protyle-wysiwyg [data-node-id].li:not([fold="1"])>.protyle-action:hover:after{
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   transform: scale(1.22);
 }
 
