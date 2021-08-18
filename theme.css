@@ -412,7 +412,6 @@ background: #00000005;
 }
 
 .block__popover.block__popover--move.block__popover--open{
-  min-height: 90% !important;
   margin: 0px auto;
   margin: 10px;
 overflow: hidden;
