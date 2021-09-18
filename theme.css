@@ -304,7 +304,7 @@ body{
   border-radius: 3px;
   padding: 1px 8px;
   z-index: 100;
-backdrop-filter: blur(16px);
+  /**backdrop-filter: blur(16px);**/
 }
 
 .layout__empty {
@@ -341,13 +341,18 @@ backdrop-filter: blur(16px);
     background: transparent;
 }
 
-  /***弹出菜单栏****/
+
+
+
+  /**弹出窗口-正常**/
+  .b3-dialog__container {
+    background-color: #10161f !important;
+    transition:all 0.1s linear;
+  }
+  /***弹出菜单栏-毛玻璃or图片样式****
 .b3-dialog__container {
 	z-index: 2;
-
-  /**使用毛玻璃背景***/
   background-color: rgb(0 0 0 / 50%);
-  backdrop-filter: blur(--blur-value);
   transition:all 0.3s linear;
 }
   /**毛玻璃背景结束**/
@@ -359,7 +364,7 @@ backdrop-filter: blur(16px);
 	background-size:cover;
   transition: all 0.3s linear;
 }
-/**图片背景结束**/
+/**图片背景结束**
 
 .b3-dialog__container::before{
     content: '';
@@ -373,6 +378,10 @@ backdrop-filter: blur(16px);
   backdrop-filter: blur(var(--blur-value))!important;
   border-radius: 6px;
 }
+/***弹出菜单栏-特殊样式结束****/
+
+
+
 
 .b3-dialog__scrim {
   background-color: rgb(0 0 0 / 0%);
@@ -892,10 +901,10 @@ background-position: -20px 100%;
 }
 
 /**利用mark作为挖空处理 */
-/* 修改高亮为挖空效果，但是预览模式关闭（毕竟需要导出） */
 .protyle-wysiwyg mark{
   background-color: var(--b3-theme-primary-lighter) ;
   color: transparent;
+  transition: all .2s linear 0ms;
 }
 .protyle-wysiwyg [data-node-id] [spellcheck="false"] mark:hover{
   background-color: transparent;
@@ -1185,7 +1194,6 @@ border-bottom: 1px solid #596169 !important;
  .b3-typography table tbody tr:nth-child(n),.protyle-wysiwyg table tbody tr:nth-child(n) {
   background: transparent;
 }
-
 
 /* 添加行悬浮时背景色 */
 .b3-typography table tr:hover, .protyle-wysiwyg table tr:hover{
