@@ -158,7 +158,7 @@
     --scrollbar-hover-background:          #999; /* 滚动条悬浮时背景色 */
     --column-scrollbar-background:         var(--b3-scroll-color); /* 边栏内滚动条通用背景色 */
     --column-scrollbar-hover-background:   var(--b3-theme-primary-light); /* 边栏内滚动条悬浮时背景色 */
-    --dialog-background:            #10161f; /*弹出窗口背景栏*/
+    --dialog-background:            #10161f; /*弹出窗口左侧背景栏*/
 
     /* 标题颜色 */
     --h1-color: inherit;
@@ -359,17 +359,6 @@ body{
 .layout__empty {
     background-color: #ffffff00;
 }
-.layout__center .layout-tab-bar{
-    background: transparent;
-    border: none;
-}
-
-.layout__center .layout-tab-bar .item{
-    background-color: transparent;
-    border:none;
-    margin: 0 4px;
-    padding-left: 10px;
-}
 
 .protyle-preview {
     background-color: #ffffff00;
@@ -390,7 +379,9 @@ body{
     background: transparent;
 }
 
-
+.fn__loading {
+  background-color: transparent !important;
+}
 
 
   /**弹出窗口-正常**/
@@ -454,7 +445,7 @@ body{
 
 /***搜索栏***/
 .search__header .b3-text-filed--text {
-  background-color: var(--glass-editor-background);
+  background-color: var(--b3-theme-primary-lightest);
 	border: 1px solid #fff0;
 	border-bottom: 1px solid #fff0 !important;
 }
@@ -745,12 +736,28 @@ body.body--win32 {
   transition: var(--common-transition);
 }
 
-
 .layout-tab-bar .item:hover .item__close{
   opacity: 1;
-  width:   8px;
-  height:  8px;
-  margin: 0 4px;;
+  width:   2px;
+  height:  2px;
+  margin: 0 2px;
+}
+
+.layout__center .layout-tab-bar{
+  background: transparent;
+  padding: 0 4px;
+  border: none;
+}
+
+.layout__center .layout-tab-bar .item{
+  border:none;
+  margin: 0 4px;
+  padding-left: 10px;
+  font-style: normal;
+}
+
+.layout__center .layout-tab-bar .item:hover{
+background-color: var(--b3-theme-primary-lightest);
 }
 
 
@@ -1069,6 +1076,18 @@ padding: 2px 6px;
 .protyle-wysiwyg [data-type="NodeList"][fold="1"]>[data-type="NodeListItem"]{
   padding-top: var(--padding-top-bottom) !important;
   padding-bottom: var(--padding-top-bottom) !important;
+}
+
+
+/*下划线样式*/
+.protyle-wysiwyg [data-node-id].hr>div {
+  border-bottom: 2px solid var(--b3-theme-primary);
+}
+
+
+/*列表样式*/
+.protyle-wysiwyg [data-node-id].li>[data-node-id]:before {
+  border-left: 1.5px solid var(--b3-theme-primary-lighter);
 }
 
 
