@@ -241,6 +241,11 @@ border: transparent;
   opacity: 1;
 }
 
+.b3-list--background {
+  border-bottom: 1px solid var(--b3-font-color9);
+}
+
+
 /*************大纲代码部分********/
 .b3-list--files [data-type="navigation-root"] .b3-list-item__text,
 .b3-list--files [data-type="navigation-root"]{
@@ -279,7 +284,7 @@ border: transparent;
 }
 
 .file-tree ul.b3-list.b3-list--background  [data-treetype="outline"]{
-  border-bottom: 1px solid var(--b3-border-color);
+  border-bottom: 1px solid rgba(230, 230, 230, .15);
 }
 /*************大纲的代码部分结束*********/
 
