@@ -158,7 +158,9 @@
     --scrollbar-hover-background:          #999; /* 滚动条悬浮时背景色 */
     --column-scrollbar-background:         var(--b3-scroll-color); /* 边栏内滚动条通用背景色 */
     --column-scrollbar-hover-background:   var(--b3-theme-primary-light); /* 边栏内滚动条悬浮时背景色 */
-    --dialog-background:            #10161f; /*弹出窗口左侧背景栏*/
+    --dialog-background:            rgb(16, 22, 31); /*弹出窗口左侧背景栏*/
+    --new-background-main:          rgba(16, 22, 31,78%);/*新背景色，用于主编辑器*/
+    
 
     /* 标题颜色 */
     --h1-color: inherit;
@@ -179,8 +181,8 @@
     --block-margin:     var(--margin-top-bottom)  var(--margin-left-right)  !important; /* 块间距 */
     --block-padding:    var(--padding-top-bottom) var(--padding-left-right) !important; /* 块内边距 */
     --background-image: url(img/bg.jpg); /* 背景图 */
-    --blur-value:      20px; /* 背景图片模糊程度 */
-    --glass-editor-background: rgba(0, 0, 0, 20%); /* 毛玻璃效果：背景色 */
+    --blur-value:      20px; /* 背景图片模糊程度, 因性能原因已暂时取消*/
+    --glass-editor-background: rgba(0, 0, 0, 20%); /* 毛玻璃效果：背景色, 因性能原因已暂时取消*/
     --glass-box-shadow: 0 4px 12px rgba(120,120,120,0.35); /* 毛玻璃效果：阴影 */
 
     /**** 动画 ****/
@@ -345,8 +347,7 @@ body{
   position: absolute;
   top: 0;	left: 0; right: 0;	bottom: 0;
   z-index: -3;   
-  background:var(--glass-editor-background);
-  backdrop-filter: blur(var(--blur-value));
+  background:var(--new-background-main);
 }
 
 .layout__center .fn__flex{
@@ -437,7 +438,7 @@ background: #00000005;
   /***弹出页面***/
 .block__popover {
   /**使用毛玻璃背景***/
-  background-color: rgb(0 0 0 / 20%);
+  background-color: var(--dialog-background);
   }
 
 .block__popover.block__popover--move.block__popover--open{
@@ -453,12 +454,6 @@ background: #00000005;
   content: '';
 position: absolute!important;
 top: 0;	left: 0; right: 0;	bottom: 0;
-z-index: -3;   
-background-position: center top;
-background-size: cover;
-background-attachment: fixed;
-background: var(--glass-editor-background);
-  backdrop-filter: blur(var(--blur-value))!important;
 }
 
 .block__icons.block__icons--border{
@@ -785,8 +780,7 @@ border-color: var(--b3-theme-primary) !important;
 }
 
 .fullscreen{
-  background-color: var(--glass-editor-background);
-  backdrop-filter: blur(var(--blur-value));
+  background-color: var(--new-background-main);
 }
 
 
