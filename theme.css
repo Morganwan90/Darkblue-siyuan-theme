@@ -264,12 +264,12 @@ border: transparent;
  }
 
  /**笔记本名称加强**/
- .b3-list--background [data-type="navigation-root"] .b3-list-item__text{
-     color: var(--b3-theme-primary) !important;
+ .b3-list--background [data-type="navigation-root"] .b3-list-item__text,
+ .b3-list--background [data-type="navigation-root"] .b3-list-item__toggle,
+ .b3-list--background [data-type="navigation-root"] .b3-list-item__icon svg{
+    color: var(--b3-theme-primary) !important;
  }
- .b3-list--background [data-type="navigation-root"] .b3-list-item__toggle {
-   color: var(--b3-theme-primary);
- }
+
 /**文档树部分结束**/
 
 /*************大纲代码部分********/
