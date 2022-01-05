@@ -159,7 +159,7 @@
     --column-scrollbar-background:         var(--b3-scroll-color); /* 边栏内滚动条通用背景色 */
     --column-scrollbar-hover-background:   var(--b3-theme-primary-light); /* 边栏内滚动条悬浮时背景色 */
     --dialog-background:            rgb(16, 22, 31); /*弹出窗口左侧背景栏*/
-    --new-background-main:          rgba(16, 22, 31,85%);/*新背景色，用于主编辑器*/
+    --new-background-main:          rgba(16, 22, 31,65%);/*新背景色，用于主编辑器*/
     
 
     /* 标题颜色 */
@@ -327,14 +327,13 @@ body{
 }
 
 .fn__flex-1.fn__flex [data-type='wnd']{
-  background: transparent; 
+  background: var(--new-background-main);
   min-height: 90% !important;
   margin:  5px;
   padding: 5px;
   position: relative;    
   box-shadow: var(--glass-box-shadow);
   overflow: hidden;
-  z-index: 2;
   box-sizing: border-box;
   border-radius: 6px;
 }
@@ -344,20 +343,10 @@ body{
   max-width: 1300px;
 }
 
-
-[data-type='wnd']::before{
-  content: '';
-  position: absolute;
-  top: 0;	left: 0; right: 0;	bottom: 0;
-  z-index: -3;   
-  background:var(--new-background-main);
-}
-
 .layout__center .fn__flex{
   padding-right: 8px;
   padding-left: 8px;
 }
-
 
 
 /**修改内容**/
@@ -389,8 +378,9 @@ body{
 }
 
 [data-type='wnd'] .layout-tab-container ,[data-type='wnd'] .protyle,[data-type='wnd'] .protyle-content,[data-type='wnd'] .protyle-wysiwyg,.block__icons{
-    background: transparent;
+  background: transparent;
 }
+
 
 .search__label .b3-form__icon-input{
     background: transparent;
@@ -750,7 +740,7 @@ border-color: var(--b3-theme-primary) !important;
 /**** 块图标 ****/
 /* 减淡块图标颜色 */
 .protyle-gutters svg {
-  color: rgba(66, 133, 244,0.5);
+  color: rgba(66, 133, 244,0.7);
 }
 
 /* 增加块图标悬浮时背景色 */
@@ -765,7 +755,6 @@ border-color: var(--b3-theme-primary) !important;
 }
 
 /**** 全屏模式 ****/
-/**** 预览模式 ****/
 .protyle-preview__action{
   background-color: var(--b3-theme-background);
 }
@@ -780,7 +769,7 @@ border-color: var(--b3-theme-primary) !important;
 }
 
 .fullscreen{
-  background-color: var(--new-background-main);
+  background-color: var(--dialog-background) !important;
 }
 
 
