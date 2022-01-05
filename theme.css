@@ -158,8 +158,8 @@
     --scrollbar-hover-background:          #999; /* 滚动条悬浮时背景色 */
     --column-scrollbar-background:         var(--b3-scroll-color); /* 边栏内滚动条通用背景色 */
     --column-scrollbar-hover-background:   var(--b3-theme-primary-light); /* 边栏内滚动条悬浮时背景色 */
-    --dialog-background:            rgb(16, 22, 31); /*弹出窗口左侧背景栏*/
-    --new-background-main:          rgba(16, 22, 31,0.7);/*新背景色，用于主编辑器*/
+    --dialog-background:            rgb(16, 22, 31); /*背景栏*/
+    --background2:            rgba(16, 22, 31,.95); /*背景栏*/
     
 
     /* 标题颜色 */
@@ -336,7 +336,7 @@ body{
 
 
 .fn__flex-1.fn__flex [data-type='wnd']{
-  background: var(--dialog-background);
+  background: var(--background2);
   min-height: 90% !important;
   margin:  5px;
   padding: 5px;
