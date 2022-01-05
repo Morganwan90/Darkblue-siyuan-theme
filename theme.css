@@ -159,7 +159,7 @@
     --column-scrollbar-background:         var(--b3-scroll-color); /* 边栏内滚动条通用背景色 */
     --column-scrollbar-hover-background:   var(--b3-theme-primary-light); /* 边栏内滚动条悬浮时背景色 */
     --dialog-background:            rgb(16, 22, 31); /*弹出窗口左侧背景栏*/
-    --new-background-main:          rgba(16, 22, 31,65%);/*新背景色，用于主编辑器*/
+    --new-background-main:          rgba(16, 22, 31,70%);/*新背景色，用于主编辑器*/
     
 
     /* 标题颜色 */
