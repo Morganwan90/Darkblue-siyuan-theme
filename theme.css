@@ -241,7 +241,7 @@ border: transparent;
 }
 
 .file-tree .b3-list--background .b3-list-item--focus .b3-list-item__text{
-  color:var(--b3-font-color12);
+  color:var(--b3-font-color12) !important;
 }
 
 /**字体清晰**/
