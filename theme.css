@@ -243,7 +243,8 @@ border: transparent;
 
 .file-tree .b3-list--background .b3-list-item--focus .b3-list-item__text,
 .file-tree .b3-list--background .b3-list-item--focus .b3-list-item__toggle,
-.file-tree .b3-list--background .b3-list-item--focus{
+.file-tree .b3-list--background .b3-list-item--focus .b3-list-item__toggle,
+.file-tree .b3-list--background .b3-list-item--focus .b3-list-item__icon svg{
   color:var(--b3-font-color12) !important;
 }
 
