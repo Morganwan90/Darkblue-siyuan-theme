@@ -339,15 +339,9 @@ body{
 }
 .layout__center .fn__flex-1.fn__flex [data-type='wnd']{
   margin:  5px auto;
-  padding: 5px 0px;
+  padding: 5px 5px;
   max-width: 1300px;
 }
-
-.layout__center .fn__flex{
-  padding-right: 8px;
-  padding-left: 8px;
-}
-
 
 /**修改内容**/
 
@@ -658,13 +652,6 @@ body.body--win32 {
 
 /************** 二、文档编辑区 **************************/
 
-/**** 页签栏 ****/
-/* 通用设置 */
-.layout-tab-bar{
-  border-bottom: var(--dock-border);
-  padding: 0;
-}
-
 
 /*清除页签栏边框对侧边栏的影响*/
 .layout-tab-bar:empty{
@@ -710,22 +697,23 @@ background-color: var(--b3-theme-primary-lightest);
   background-color: transparent; 
 }
 
+.layout-tab-bar .item__text{
+  border-bottom: 3px solid transparent;
+  opacity: 0.6;
+  color: var(--b3-theme-on-background);
+}
+
+.layout-tab-bar .item--focus {
+border-bottom: 3px solid !important;
+padding: 2px;
+border-color: var(--b3-theme-primary) !important;
+box-shadow:none;
+}
 .layout-tab-bar .item--focus .item__text{
   opacity: 1;
   color: var(--b3-font-color10);
 }
 
-.layout-tab-bar .item__text{
-  border-bottom: 3px solid transparent;
-  padding: 2px;
-  text-overflow:ellipsis;
-  opacity: 0.6;
-    color: var(--b3-theme-on-background);
-}
-.layout-tab-bar .item--focus {
-border-bottom: 3px solid !important;
-border-color: var(--b3-theme-primary) !important;
-}
 /* 样式代码结束 */
 
 
