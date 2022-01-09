@@ -11,8 +11,7 @@
 
 根据logseq的主题作者pengx17的代码改造，效果如下：
 
-![截图_20225710125718](https://user-images.githubusercontent.com/61633409/148695615-bbb124cb-dc4b-47ee-b32e-2de69e965b58.gif)
-
+![截图_20221610031648](https://user-images.githubusercontent.com/61633409/148697247-cc916961-1c0c-4dbc-ab9f-a29a431d683c.gif)
 列表中可以同一块多行<br>可以无序列表和有序列表混搭<br>但不可以列表和文字块混搭（着重线会断...)，如果有好办法github告诉我哈~
 
 ### 2022.1.5
