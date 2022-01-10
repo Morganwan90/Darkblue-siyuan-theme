@@ -167,7 +167,7 @@
     --column-scrollbar-hover-background:   var(--b3-theme-primary-light); /* 边栏内滚动条悬浮时背景色 */
     --dialog-background:            rgb(16, 22, 31); /*背景栏*/
     --background2:            rgba(16, 22, 31,.95); /*主编辑栏背景栏*/
-    --list-border-initial:                 var(--b3-theme-primary-lighter);  /*列表大纲线颜色*/
+    --list-border-initial:                 var(--b3-font-color9);  /*列表大纲线颜色*/
     --list-border-focus:                   var(--b3-font-color12);  /*子弹着重线颜色*/
     --list-bullet-focus:                   var(--b3-font-color10);  /*bullet着重颜色*/
     --list-bullet-hover-background:        var(--b3-font-color9);   /*bullet悬停背景色*/
