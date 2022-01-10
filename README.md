@@ -14,9 +14,9 @@
 
 ![截图_20221810031854](https://user-images.githubusercontent.com/61633409/148697308-b755b5f5-0e0f-4b2d-91b7-e16a6a9baf4c.gif)
 
-列表中可以同一块多行，可以无序列表和有序列表混搭
+列表中可以同一块多行，可以无序列表、有序列表、表格、嵌入块混搭
 
-但不可以和单独的文字、表格混搭（着重线会断...)，如果有好办法github告诉我哈~
+但列表不和与纯文本块混带，如果有好办法可以个联系我哈~
 
 ##### 单独使用子弹流方式
 1.将Bullet-Threading.CSS拷贝至主题css目录下
@@ -27,7 +27,7 @@
 @import url("Bullet-Threading.css");
 
 :root {
-    --list-border-initial:                 #0442a5de;  /*列表大纲线颜色*/
+    --list-border-initial:                 #74b9ff;  /*列表大纲线颜色*/
     --list-border-focus:                   #f3722c;  /*子弹着重线颜色*/
     --list-bullet-focus:                   #4285f4;  /*bullet着重颜色*/
     --list-bullet-hover-background:        #74b9ff;   /*bullet悬停背景色*/
