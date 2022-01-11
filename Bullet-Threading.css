@@ -48,7 +48,7 @@
 
 
 /**列表、表格混排**/
-.protyle-wysiwyg [data-node-id].li :focus-within>[data-node-id].table:before{
+.protyle-wysiwyg [data-node-id].li :focus-within>[data-node-id].table:not(:focus-within):before{
   top: -2px ;
   height: calc(100% + 8px) ;
   border-left: 3px solid var(--list-border-focus);
