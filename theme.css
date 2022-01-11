@@ -173,6 +173,7 @@
     --list-bullet-hover-background:        var(--b3-font-color9);   /*bullet悬停背景色*/
     --list-bullet-fold-background:         var(--b3-font-color11);  /*bullet折叠背景色*/
     --list-bullet-fold:                    var(--b3-font-color12);  /*bullet折叠时着重颜色*/
+    --list-bullet-padding:                 16px;
     
 
     /* 标题颜色 */
@@ -676,28 +677,10 @@ body.body--win32 {
   border-bottom: none;
 }
 
-/* 清除标题过长时渐变效果 */
-.layout-tab-bar .item__text::after,.layout-tab-bar .item--focus .item__text::after,.layout-tab-bar .item:hover:not(.item--focus) .item__text::after{
-  background: transparent;
-}
-
-
-/* 标题过长时...表示 */
-.layout-tab-bar .item__text{
-  text-overflow:ellipsis;
-  padding: 0 2px; 
-}
-
 .layout__center .layout-tab-bar{
   background: transparent;
   padding: 0 4px;
   border: none;
-}
-
-.layout__center .layout-tab-bar .item{
-  margin: 0 4px;
-  padding-left: 10px;
-  font-style: normal;
 }
 
 .layout__center .layout-tab-bar .item:hover{
@@ -705,12 +688,16 @@ background-color: var(--b3-theme-primary-lightest);
 }
 
 
-/** 页签样式-下划线**/
-
-.layout-tab-bar .item{
-  padding: 0 4px; 
+ /** 页签样式-下划线**/
+  
+ .layout-tab-bar .item{
+  margin:0 3px;
+  padding: 0 2px; 
   background-color: transparent; 
-  border-bottom: 0.5px solid var(--b3-font-color9);
+  border-right:1px solid var(--b3-font-color9);
+  border-bottom: 1px solid var(--b3-font-color9);
+  box-shadow: none;
+  font-style: normal;
 }
 
 .layout-tab-bar .item__text{
@@ -722,7 +709,8 @@ background-color: var(--b3-theme-primary-lightest);
 }
 
 .layout-tab-bar .item--focus {
-  border-bottom: 3px solid var(--b3-theme-primary) !important;
+  border-right:1px solid var(--b3-font-color10)!important;
+  border-bottom: 3px solid var(--b3-theme-primary)!important;
 }
   
 .layout-tab-bar .item--focus .item__text{
@@ -730,8 +718,17 @@ background-color: var(--b3-theme-primary-lightest);
   color: var(--b3-font-color10);
 }
 
-/* 样式代码结束 */
+/**钉住的样式**/
+.layout-tab-bar .item--pin{
+  flex:0.3;
+  border-right:1px solid var(--b3-font-color12);
+  border-bottom: 3px solid var(--b3-font-color12);
 
+}
+
+.layout-tab-bar .item--pin .item__close svg{
+  color:var(--b3-font-color12);
+}
 
 
 /**** 面包屑 ****/
