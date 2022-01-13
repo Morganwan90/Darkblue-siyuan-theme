@@ -39,7 +39,7 @@
     --list-border-color:rgb(255, 255, 255);
 
     /* 滚动条 */
-    --b3-scroll-color: var(--b3-theme-primary-lighter);
+    --b3-scroll-color: var(--column-scrollbar-background);
 
     /* 列表 */
     --b3-list-hover: rgba(66, 133, 244, 0.38);
@@ -94,7 +94,7 @@
 
     /* 阴影 */
     --b3-point-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
-    --b3-dialog-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12);
+    --b3-dialog-shadow: 0px 0px 20px 4px rgba(66, 133, 244, 0.15);
 
 
     /* diff */
@@ -161,8 +161,7 @@
     --gutters-hover-background:     var(--b3-theme-surface); /* 块图标悬浮时背景色（不要使用透明色） */
     --switch-uncheck-color:         #FFF; /* switch 开关未开启时颜色 */
 
-    --scrollbar-hover-background:          #999; /* 滚动条悬浮时背景色 */
-    --column-scrollbar-background:         var(--b3-scroll-color); /* 边栏内滚动条通用背景色 */
+    --column-scrollbar-background:         var(--b3-theme-primary-lightest); /* 边栏内滚动条通用背景色 */
     --column-scrollbar-hover-background:   var(--b3-theme-primary-light); /* 边栏内滚动条悬浮时背景色 */
     --dialog-background:            #10161f; /*背景栏*/
     --background2:            rgba(16, 22, 31,.95); /*主编辑栏背景栏*/
@@ -351,6 +350,7 @@ body{
   box-sizing: border-box;
   border-radius: 15px;
 }
+
 .layout__center .fn__flex-1.fn__flex [data-type='wnd']{
   margin:  5px auto;
   padding: 5px 5px;
@@ -413,9 +413,10 @@ body{
     color:var(--b3-font-color10);
   }
 
-
-
-
+  .b3-dialog--open .fn__flex .b3-list--background,
+  .b3-dialog--open .fn__flex .b3-list-item {
+    border-bottom:none;
+  }
 
 .b3-dialog__scrim {
   background-color: rgb(0 0 0 / 0%);
@@ -437,8 +438,6 @@ body{
     padding: 16px 24px;
 }
 
-
-
   /***搜索栏***/
 .search__header .b3-text-filed--text {
   background-color: var(--dialog-background);
@@ -450,18 +449,16 @@ div#searchList {
 background: #00000005;
 }
 
+
   /***弹出页面***/
 .block__popover {
   background-color: var(--dialog-background);
-  }
+}
 
 .block__popover.block__popover--move.block__popover--open{
   border-radius: 15px;
   box-shadow: 0px 0px 40px 8px rgba(66, 133, 244, 0.15);
 } 
-
-
-
 
 .protyle {
   background-color: #00000000;
@@ -658,7 +655,7 @@ body.body--win32 {
 /* 通用滚动条 */
 ::-webkit-scrollbar { width: 8px;}
 ::-webkit-scrollbar-thumb{ background-color:var(--column-scrollbar-background); border-radius: 30px;}
-::-webkit-scrollbar-thumb:hover{  background-color: var(--column-scrollbar-hover-background); }
+::-webkit-scrollbar-thumb:hover{ background-color: var(--column-scrollbar-hover-background); }
 
 /* 边栏滚动条 */
 #layouts>.fn__flex-1>.fn__flex-column ::-webkit-scrollbar{ width: 6px;}
