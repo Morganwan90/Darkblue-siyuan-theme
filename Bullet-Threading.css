@@ -20,7 +20,7 @@
   left: calc(var(--list-bullet-padding) *-1 - 2.5px);
   right: 20px;
   top: -12px;
-  bottom: 15.5px;
+  bottom: 14.5px;
   position: absolute;
   border-left: 3px solid var(--list-border-focus);
   border-bottom: 3px solid var(--list-border-focus);
