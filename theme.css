@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'HarmonyOS';
+  font-style: normal;
+  src: url('fonts/HarmonyOS_Sans_SC_Regular.ttf');
+}
 /******* 深色主题配色模板 **********/
 
 :root {
@@ -21,8 +26,10 @@
     --b3-theme-on-error:     #fff;
 
     /* 字体 */
-    --b3-font-family: "Pingfang SC", "quote", "Helvetica Neue", "Luxi Sans", "DejaVu Sans", "Hiragino Sans GB", "Microsoft Yahei", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", "EmojiSymbols";
-    --b3-font-family-code: mononoki, Consolas, "Liberation Mono", Menlo, Courier, monospace, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", "EmojiSymbols";
+    --b3-font-family: 'HarmonyOS','Helvetica Neue', 'Luxi Sans', 'DejaVu Sans', 'Hiragino Sans GB','Microsoft Yahei', sans-serif, 
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji','Win10 Emoji', 'Segoe UI Symbol', 'Android Emoji', 'EmojiSymbols';
+    --b3-font-family-code: mononoki, Consolas, "Liberation Mono", Menlo, Courier, monospace, "Apple Color Emoji", "Segoe UI Emoji",
+    "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", "EmojiSymbols";
     --b3-font-family-graph: mononoki;
 
     /* 线条 */
