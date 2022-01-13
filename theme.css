@@ -231,23 +231,12 @@ border: transparent;
 .toolbar,#dockLeft, #dockRight, #dockTop, #dockBottom{
   background: transparent;
 }
-/* 边栏列表项 */
-.b3-list-item, .b3-list-item__text{
-  color: var(--b3-theme-on-surface);
-}
+
 
 /**文档树部分**/
 
 .b3-list--background .b3-list-item--focus:not(.dragover):not(.dragover__top):not(.dragover__bottom) {
   background-color: var(--b3-theme-primary-lighter) !important;
-}
-
-.b3-list--background .b3-list-item--focus {
-  background-color: var(--b3-theme-primary-lighter) !important;
-}
-
-.b3-list--background .b3-list-item:hover {
-  background-color: var(--b3-theme-primary-lightest);
 }
 
 .b3-list--background .b3-list-item:hover:not(.b3-list-item--focus) {
@@ -260,6 +249,7 @@ border: transparent;
 .file-tree .b3-list--background .b3-list-item--focus .b3-list-item__icon svg{
   color:var(--b3-font-color12) !important;
 }
+
 
 /**字体清晰**/
 .file-tree [data-type="navigation-file"] .b3-list-item__text{
@@ -323,9 +313,10 @@ border: transparent;
 }
 /*************大纲的代码部分结束*********/
 
-
-
-
+/* 边栏列表项 */
+.b3-list-item, .b3-list-item__text{
+  color: var(--b3-theme-on-surface);
+}
 
 /* 边栏搜索 */
 .search__label .b3-form__icon-input{
@@ -358,7 +349,7 @@ body{
   box-shadow: var(--glass-box-shadow);
   overflow: hidden;
   box-sizing: border-box;
-  border-radius: 6px;
+  border-radius: 15px;
 }
 .layout__center .fn__flex-1.fn__flex [data-type='wnd']{
   margin:  5px auto;
@@ -414,6 +405,18 @@ body{
     transition:all 0.1s linear;
   }
 
+  .b3-dialog__close {
+    display:none;
+  }
+  
+  .b3-list--background .b3-list-item--focus {
+    color:var(--b3-font-color10);
+  }
+
+
+
+
+
 .b3-dialog__scrim {
   background-color: rgb(0 0 0 / 0%);
 
@@ -434,12 +437,14 @@ body{
     padding: 16px 24px;
 }
 
-/***搜索栏***/
+
+
+  /***搜索栏***/
 .search__header .b3-text-filed--text {
-  background-color: var(--b3-theme-primary-lightest);
-	border: 1px solid #fff0;
-	border-bottom: 1px solid #fff0 !important;
+  background-color: var(--dialog-background);
+  border-bottom: 1px solid var(--b3-theme-primary-lighter) !important;
 }
+
 div#searchList {
   column-count: 2;
 background: #00000005;
@@ -451,13 +456,12 @@ background: #00000005;
   }
 
 .block__popover.block__popover--move.block__popover--open{
-  border-radius: 6px;
-  box-shadow: 0px 0px 50px 10px rgba(66, 133, 244, 0.15);
+  border-radius: 15px;
+  box-shadow: 0px 0px 40px 8px rgba(66, 133, 244, 0.15);
 } 
 
-.block__icons.block__icons--border{
-background-color: var(--custom-components);
-}
+
+
 
 .protyle {
   background-color: #00000000;
@@ -693,7 +697,6 @@ background-color: var(--b3-theme-primary-lightest);
   margin:0 3px;
   padding: 0 2px; 
   background-color: transparent; 
-  border-right:1px solid var(--b3-font-color9);
   border-bottom: 1px solid var(--b3-font-color9);
   box-shadow: none;
   font-style: normal;
@@ -708,7 +711,6 @@ background-color: var(--b3-theme-primary-lightest);
 }
 
 .layout-tab-bar .item--focus {
-  border-right:1px solid var(--b3-font-color10)!important;
   border-bottom: 3px solid var(--b3-theme-primary)!important;
 }
   
@@ -719,8 +721,7 @@ background-color: var(--b3-theme-primary-lightest);
 
 /**钉住的样式**/
 .layout-tab-bar .item--pin{
-  flex:0.3;
-  border-right:1px solid var(--b3-font-color12);
+  flex:0.2;
   border-bottom: 3px solid var(--b3-font-color12);
 
 }
