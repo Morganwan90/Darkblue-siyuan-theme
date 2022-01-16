@@ -18,8 +18,8 @@
 .protyle-wysiwyg [data-node-id].li [data-node-id].li:focus-within > .protyle-action:before {
   content: "";
   left: calc(var(--list-bullet-padding) *-1 - 2.5px);
-  right: 20px;
-  top: -12px;
+  right: 24px;
+  top: -10px;
   bottom: 14.5px;
   position: absolute;
   border-left: 3px solid var(--list-border-focus);
@@ -41,10 +41,12 @@
   border-color: transparent;
 }
 
+
+
 /**加强线填充至bullet**/
-.protyle-wysiwyg [data-node-id].li:focus-within>div:nth-child(2):not(:focus-within):before {
-  top: 20px !important;
-  height: 100% !important;
+.protyle-wysiwyg [data-node-id].li:focus-within >div:nth-child(2):not(:focus-within):before {
+  top: 26px !important;
+  height: calc(100%-26px) !important;
   border-left: 3px solid var(--list-border-focus);
   left:-18.5px;
 }
@@ -67,6 +69,12 @@
   left:-19.5px;
 }
 
+/**大纲颜色与卡片背景色统一**/
+.protyle-wysiwyg [data-node-id].li>.protyle-action{
+  color:inherit;
+}
+
+
 /**光标所在序列-圆点、序号颜色加强**/
 .protyle-wysiwyg [data-node-id].li:focus-within>.protyle-action {
   color:var(--list-bullet-focus) !important;
@@ -78,7 +86,7 @@
   height: 24px;
 }
 
-/* 圆点悬浮时样式 */
+/* 大纲悬浮时样式 */
 .protyle-wysiwyg [data-node-id].li>.protyle-action:hover:after{
   background-color: var(--list-bullet-hover-background) !important;
   opacity: 0.2; /* 圆点悬浮时外圈透明度 */
@@ -103,5 +111,6 @@
   transition: all 0.2s ease-in-out;
   transform: scale(1.22);
 }
+
 
 /****子弹流笔记加强结束***/

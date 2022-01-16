@@ -11,7 +11,7 @@
     --b3-theme-primary-light: rgba(4, 66, 165, 0.871);
     --b3-theme-primary-lighter: rgba(66, 133, 244, 0.38);
     --b3-theme-primary-lightest: rgba(66, 133, 244, 0.12);
-    --b3-theme-secondary: #f3a92f;
+    --b3-theme-secondary: #f3722c;
     --b3-theme-background: var(--dialog-background); /* 背景色，主要用于编辑器背景 */
     --b3-theme-surface: rgba(0, 0, 0, 0.20); /* 主要用于分栏背景 */
     --b3-theme-surface-light: rgba(41, 42, 45, .86);
@@ -142,7 +142,7 @@
     --b3-protyle-inline-mark-background: #ffe68d;
     --b3-protyle-inline-mark-color: #444;
     --b3-protyle-inline-tag-color: var(--b3-theme-on-primary);
-    --b3-protyle-inline-blockref-color:var(--b3-font-color12);
+    --b3-protyle-inline-blockref-color:var(--b3-theme-secondary);
 
     /************** Theme *********************/
     /**** 配色 ****/
@@ -242,11 +242,11 @@ border: transparent;
   background-color: var(--b3-theme-primary-lightest);
 }
 
-.file-tree .b3-list--background .b3-list-item--focus .b3-list-item__text,
-.file-tree .b3-list--background .b3-list-item--focus .b3-list-item__toggle,
-.file-tree .b3-list--background .b3-list-item--focus .b3-list-item__toggle,
-.file-tree .b3-list--background .b3-list-item--focus .b3-list-item__icon svg{
-  color:var(--b3-font-color12) !important;
+.file-tree .b3-list--background .b3-list-item--focus:not([data-treetype="outline"]) .b3-list-item__text,
+.file-tree .b3-list--background .b3-list-item--focus:not([data-treetype="outline"]) .b3-list-item__toggle,
+.file-tree .b3-list--background .b3-list-item--focus:not([data-treetype="outline"]) .b3-list-item__icon svg,
+.file-tree .b3-list--background .b3-list-item--focus:not([data-treetype="outline"]){
+  color:var(--b3-theme-secondary) !important;
 }
 
 
@@ -289,7 +289,7 @@ border: transparent;
 .file-tree ul.b3-list.b3-list--background [data-subtype="h2"] .b3-list-item__text,
 .file-tree ul.b3-list.b3-list--background [data-subtype="h2"] .b3-list-item__toggle,
 .file-tree ul.b3-list.b3-list--background [data-subtype="h2"]{
-    color:var(--b3-font-color12);
+    color:var(--b3-theme-secondary);
 }
 .file-tree ul.b3-list.b3-list--background [data-subtype="h3"] .b3-list-item__text,
 .file-tree ul.b3-list.b3-list--background [data-subtype="h3"] .b3-list-item__toggle,
@@ -307,9 +307,6 @@ border: transparent;
     color:var(--b3-font-color9);
 }
 
-.file-tree ul.b3-list.b3-list--background  [data-treetype="outline"]{
-  border-bottom: 1px solid rgba(230, 230, 230, .15);
-}
 /*************大纲的代码部分结束*********/
 
 /* 边栏列表项 */
@@ -329,6 +326,8 @@ border: transparent;
 .layout__resize--lr:after{
   background-color: var(--column-border);
 }
+
+
 
 /*********实验功能：毛玻璃效果 代码开始 ***********/
 body{
@@ -409,8 +408,8 @@ body{
     display:none;
   }
   
-  .b3-list--background .b3-list-item--focus {
-    color:var(--b3-font-color10);
+  .b3-list--background .b3-list-item--focus:not([data-treetype="outline"]) {
+    color:var(--b3-theme-primary);
   }
 
   .b3-dialog--open .fn__flex .b3-list--background,
@@ -691,12 +690,13 @@ background-color: var(--b3-theme-primary-lightest);
  /** 页签样式-下划线**/
   
  .layout-tab-bar .item{
-  margin:0 3px;
+  margin: 0px 3px;
   padding: 0 2px; 
   background-color: transparent; 
   border-bottom: 1px solid var(--b3-font-color9);
   box-shadow: none;
   font-style: normal;
+
 }
 
 .layout-tab-bar .item__text{
@@ -713,18 +713,18 @@ background-color: var(--b3-theme-primary-lightest);
   
 .layout-tab-bar .item--focus .item__text{
   opacity: 1;
-  color: var(--b3-font-color10);
+  color: var(--b3-theme-primary);
 }
 
 /**钉住的样式**/
 .layout-tab-bar .item--pin{
   flex:0.2;
-  border-bottom: 3px solid var(--b3-font-color12);
+  border-bottom: 3px solid var(--b3-theme-secondary);
 
 }
 
 .layout-tab-bar .item--pin .item__close svg{
-  color:var(--b3-font-color12);
+  color:var(--b3-theme-secondary);
 }
 
 
@@ -915,7 +915,7 @@ background-position: -20px 100%;
 }
 .protyle-wysiwyg [data-node-id] [spellcheck="false"] mark:hover{
   background-color: transparent;
-  color: var(--b3-font-color12);
+  color: var(--b3-theme-secondary);
   font-weight: bold;
 }
 
@@ -1003,7 +1003,7 @@ padding: 2px 6px;
 /* 段落折叠后添加三角形标识 */
 .protyle-wysiwyg [data-type="NodeParagraph"][fold="1"]:after{
   content: "";
-  background-color: var(--b3-font-color12);
+  background-color: var(--b3-theme-secondary);
   width:  12px;
   height: var(--line-height) ;
   position: absolute;
@@ -1092,7 +1092,7 @@ padding: 2px 6px;
   text-align: center;
   padding: 2px 0px 0px 7px;
   margin:20px 0px;
-  border-bottom: 4px double var(--b3-font-color10) !important;
+  border-bottom: 4px double var(--b3-theme-primary) !important;
   font-size: 1.75em;
   color: var(--b3-theme-primary);
 }
@@ -1104,8 +1104,8 @@ padding: 2px 6px;
   text-align: justify;
   padding: 2px 0px 0px 7px;
   margin:15px 0px;
-  border-bottom: 2px solid var(--b3-font-color12) !important;
-  color:var(--b3-font-color12);
+  border-bottom: 2px solid var(--b3-theme-secondary) !important;
+  color:var(--b3-theme-secondary);
   }
 
 .protyle-wysiwyg [data-node-id].h3 ,.b3-typography h3{
@@ -1217,8 +1217,8 @@ padding: 2px 6px;
 .protyle-wysiwyg [data-node-id].li [data-node-id].li:focus-within > .protyle-action:before {
   content: "";
   left: calc(var(--list-bullet-padding) *-1 - 2.5px);
-  right: 20px;
-  top: -12px;
+  right: 24px;
+  top: -10px;
   bottom: 14.5px;
   position: absolute;
   border-left: 3px solid var(--list-border-focus);
@@ -1240,10 +1240,12 @@ padding: 2px 6px;
   border-color: transparent;
 }
 
+
+
 /**加强线填充至bullet**/
-.protyle-wysiwyg [data-node-id].li:focus-within>div:nth-child(2):not(:focus-within):before {
-  top: 20px !important;
-  height: 100% !important;
+.protyle-wysiwyg [data-node-id].li:focus-within >div:nth-child(2):not(:focus-within):before {
+  top: 26px !important;
+  height: calc(100%-26px) !important;
   border-left: 3px solid var(--list-border-focus);
   left:-18.5px;
 }
@@ -1266,6 +1268,12 @@ padding: 2px 6px;
   left:-19.5px;
 }
 
+/**大纲颜色与卡片背景色统一**/
+.protyle-wysiwyg [data-node-id].li>.protyle-action{
+  color:inherit;
+}
+
+
 /**光标所在序列-圆点、序号颜色加强**/
 .protyle-wysiwyg [data-node-id].li:focus-within>.protyle-action {
   color:var(--list-bullet-focus) !important;
@@ -1277,7 +1285,7 @@ padding: 2px 6px;
   height: 24px;
 }
 
-/* 圆点悬浮时样式 */
+/* 大纲悬浮时样式 */
 .protyle-wysiwyg [data-node-id].li>.protyle-action:hover:after{
   background-color: var(--list-bullet-hover-background) !important;
   opacity: 0.2; /* 圆点悬浮时外圈透明度 */
@@ -1307,7 +1315,8 @@ padding: 2px 6px;
 /**Dark Blue & Light Blue 标题块列表线特定**/
 .protyle-wysiwyg [data-node-id].li>[data-node-id].h1:before,
 .protyle-wysiwyg [data-node-id].li>[data-node-id].h2:before,
-.protyle-wysiwyg [data-node-id].li>[data-node-id].h3:before {
+.protyle-wysiwyg [data-node-id].li>[data-node-id].h3:before,
+.protyle-wysiwyg [data-node-id].li>[data-node-id].h4:before {
   height:100% !important;
 }
 /****子弹流笔记加强结束***/
