@@ -44,9 +44,9 @@
 
 /**加强线填充至bullet**/
 .protyle-wysiwyg [data-node-id].li:focus-within>div:nth-child(2):not(:focus-within):before {
-  top: calc(6px + 18em / 16) !important;
+  top: calc(6px + 18em / 16) ;
   border-left: 3px solid var(--list-border-focus);
-  height:calc(100% - 1em) !important;
+  height:calc(100% - 0.5em) !important;
   left:-18.5px;
 }
 
@@ -61,6 +61,7 @@
 .protyle-wysiwyg [data-node-id].li>[data-node-id].render-node:before {
   left:-19px;
 }
+
 .protyle-wysiwyg [data-node-id].li :focus-within>[data-node-id].render-node:not(:focus-within):before{
   border-left: 3px solid var(--list-border-focus);
   left:-19.5px;
