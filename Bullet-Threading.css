@@ -19,7 +19,7 @@
   left: calc(var(--list-bullet-padding) *-1 - 2.5px);
   right: calc(20px + 0.25em);
   top: calc(2px - 12em / 16);
-  bottom: calc(-0.5px + 14em / 16 );
+  bottom: calc(0.5px + 14em / 16 );
   position: absolute;
   border-left: 3px solid var(--list-border-focus);
   border-bottom: 3px solid var(--list-border-focus);
@@ -42,12 +42,16 @@
 }
 
 
-/**加强线填充至bullet**/
+/**辅助线**/
 .protyle-wysiwyg [data-node-id].li:focus-within>div:nth-child(2):not(:focus-within):before {
-  top: calc(6px + 18em / 16) ;
   border-left: 3px solid var(--list-border-focus);
-  height:calc(100% - 0.5em) !important;
-  left:-18.5px;
+  left: -18.5px;
+}
+
+/**表格子弹线**/
+.protyle-wysiwyg [data-node-id].li:focus-within>div:nth-child(2)[data-type="NodeTable"]:not(:focus-within):before {
+  top: calc(6px + 18em / 16) !important;
+  height:calc(100% - 18px) !important;
 }
 
 
@@ -109,7 +113,6 @@
   transition: all 0.2s ease-in-out;
   transform: scale(1.22);
 }
-
 
 
 /****子弹流笔记加强结束***/
