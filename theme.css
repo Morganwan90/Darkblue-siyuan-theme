@@ -1235,7 +1235,7 @@ padding: 2px 6px;
 /**辅助线**/
 .protyle-wysiwyg [data-node-id].li:focus-within>div:nth-child(2):not(:focus-within):before {
   border-left: 3px solid var(--list-border-focus);
-  left:-19px;
+  left:-18.5px;
 }
 
 .protyle-wysiwyg [data-node-id].li:focus-within>div:nth-child(2):not([data-type="NodeHeading"]):not(:focus-within):before {
@@ -1318,15 +1318,15 @@ padding: 2px 6px;
 }
 
 .protyle-wysiwyg [data-node-id].li>div:nth-child(2)[data-subtype="h2"]:before{
-  height:calc(100% - 26px) !important;  /**为啥这个比light高？**/
+  height:calc(100% - 24px) !important;  /**为啥这个比light高？**/
 }
 
 .protyle-wysiwyg [data-node-id].li>div:nth-child(2)[data-subtype="h3"]:before{
-  height:calc(100% - 26px) !important;  /**为啥这个比light高？**/
+  height:calc(100% - 24px) !important;  /**为啥这个比light高？**/
 }
 
 .protyle-wysiwyg [data-node-id].li>div:nth-child(2)[data-subtype="h4"]:before{
-  height:calc(100% - 26px) !important;  /**为啥这个比light高？**/
+  height:calc(100% - 24px) !important;  /**为啥这个比light高？**/
 }
 
 
