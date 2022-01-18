@@ -135,14 +135,14 @@
     --b3-protyle-code-background: rgba(240, 246, 252, .15);
 
     /* 所见即所得行内元素颜色 */
-    --b3-protyle-inline-strong-color: inherit;
-    --b3-protyle-inline-em-color: inherit;
-    --b3-protyle-inline-s-color: inherit;
-    --b3-protyle-inline-link-color: var(--b3-theme-primary);
-    --b3-protyle-inline-mark-background: #ffe68d;
-    --b3-protyle-inline-mark-color: #444;
-    --b3-protyle-inline-tag-color: var(--b3-theme-on-primary);
-    --b3-protyle-inline-blockref-color:var(--b3-theme-secondary);
+    --b3-protyle-inline-strong-color: inherit;  /* 粗体 */
+    --b3-protyle-inline-em-color: inherit;  /* 斜体 */
+    --b3-protyle-inline-s-color: inherit;   /* 删除线 */
+    --b3-protyle-inline-link-color: var(--b3-theme-primary);    /* 超级链接 */
+    --b3-protyle-inline-mark-background: #ffe68d;     /* 高亮背景 */
+    --b3-protyle-inline-mark-color: #444;       /* 高亮文字 */
+    --b3-protyle-inline-tag-color: var(--b3-theme-on-primary);    /* 标签 */
+    --b3-protyle-inline-blockref-color:var(--b3-theme-secondary);   /* 双向链接 */
 
     /************** Theme *********************/
     /**** 配色 ****/
@@ -1327,6 +1327,24 @@ padding: 2px 6px;
 
 .protyle-wysiwyg [data-node-id].li>div:nth-child(2)[data-subtype="h4"]:before{
   height:calc(100% - 26px) !important;  /**为啥这个比light高？**/
+}
+
+
+/**标题子弹线上移**/
+.protyle-wysiwyg [data-node-id].li:focus-within>div:nth-child(2)[data-subtype="h1"]:not(:focus-within):before{
+  top: calc(1em - 2px) !important;
+}
+
+.protyle-wysiwyg [data-node-id].li:focus-within>div:nth-child(2)[data-subtype="h2"]:not(:focus-within):before{
+  top: calc(1em + 1px) !important;
+}
+
+.protyle-wysiwyg [data-node-id].li:focus-within>div:nth-child(2)[data-subtype="h3"]:not(:focus-within):before{
+  top: calc(1em + 3px) !important;
+}
+
+.protyle-wysiwyg [data-node-id].li:focus-within>div:nth-child(2)[data-subtype="h4"]:not(:focus-within):before{
+  top: calc(1em + 5px) !important;
 }
 /****子弹流笔记加强结束***/
 
