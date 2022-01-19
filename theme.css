@@ -459,9 +459,6 @@ background: #00000005;
   box-shadow: 0px 0px 40px 8px rgba(66, 133, 244, 0.15);
 } 
 
-.protyle {
-  background-color: #00000000;
-}
 
 .protyle-background{
   margin: 10px;
@@ -1253,6 +1250,7 @@ padding: 2px 6px;
 .protyle-wysiwyg [data-node-id].li:focus-within>[data-node-id].table:not(:focus-within):before{
   border-left: 3px solid var(--list-border-focus);
   left:-18.5px;
+  top:-4px;
 }
 
 /**列表、嵌入块时混排**/
@@ -1349,3 +1347,11 @@ padding: 2px 6px;
 /****子弹流笔记加强结束***/
 
 
+/***移动端****/
+.side-panel {
+  background-color: var(--dialog-background);
+}
+
+.protyle {
+  background-color: rgba(16, 22, 31,0.75);
+}
