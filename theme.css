@@ -1099,7 +1099,7 @@ padding: 2px 6px;
   text-align: justify;
   padding: 2px 0px 0px 7px;
   margin-bottom:10px;
-  border-bottom: 2px solid var(--b3-font-color10) !important;
+  border-left: 6px solid var(--b3-font-color10) !important;
   color:var(--b3-font-color10);
 }
 
@@ -1110,7 +1110,7 @@ padding: 2px 6px;
   text-align: justify;
   padding: 2px 0px 0px 7px;
   margin-bottom:5px;
-  border-bottom: 2px solid var(--b3-font-color3) !important;
+  border-left: 4px solid var(--b3-font-color3) !important;
   color:var(--b3-font-color3);
 }
 
@@ -1118,7 +1118,7 @@ padding: 2px 6px;
   font-size: 1.1em;
   padding: 2px 0px 0px 7px;
   margin-bottom:5px;
-  border-bottom: 2px solid var(--b3-font-color9) !important;
+  border-left: 2px solid var(--b3-font-color9) !important;
   color:var(--b3-font-color9);
 }
 
@@ -1132,6 +1132,19 @@ padding: 2px 6px;
   height:100% !important;   
 }
 
+/**标题线**/
+
+.protyle-wysiwyg [data-node-id].li>[data-node-id][data-subtype="h3"]::before {
+  left:calc(18px * -1 - 6px);
+}
+
+.protyle-wysiwyg [data-node-id].li>[data-node-id][data-subtype="h4"]::before {
+  left:calc(18px * -1 - 4px);
+}
+
+.protyle-wysiwyg [data-node-id].li>[data-node-id][data-subtype="h5"]::before {
+  left:calc(18px * -1 - 2px);
+}
 
 /* 标题折叠时样式 */
 .protyle-wysiwyg [data-node-id][fold="1"]:not(.li){
@@ -1324,22 +1337,7 @@ padding: 2px 6px;
 }
 
 
-/**标题子弹线上移**
-.protyle-wysiwyg [data-node-id].li:focus-within>div:nth-child(2)[data-subtype="h1"]:not(:focus-within):before{
-  top: calc(1em - 2px) !important;
-}
 
-.protyle-wysiwyg [data-node-id].li:focus-within>div:nth-child(2)[data-subtype="h2"]:not(:focus-within):before{
-  top: calc(1em + 1px) !important;
-}
-
-.protyle-wysiwyg [data-node-id].li:focus-within>div:nth-child(2)[data-subtype="h3"]:not(:focus-within):before{
-  top: calc(1em + 3px) !important;
-}
-
-.protyle-wysiwyg [data-node-id].li:focus-within>div:nth-child(2)[data-subtype="h4"]:not(:focus-within):before{
-  top: calc(1em + 5px) !important;
-}
 /****子弹流笔记加强结束***/
 
 
@@ -1351,3 +1349,4 @@ padding: 2px 6px;
 .protyle {
   background-color: rgba(16, 22, 31,0.75);
 }
+
