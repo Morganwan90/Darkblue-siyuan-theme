@@ -231,7 +231,7 @@
 	/* 通用动画 */
 }
 /* 选择框颜色 */
-.b3-select {
+select {
 	background-color:var(--b3-theme-primary-lightest);
 	/*更改*/
 }
@@ -289,7 +289,8 @@ option {
 	border-bottom:1px solid var(--b3-font-color9);
 }
 /**笔记文档下划线**/
-.b3-list-item {
+.b3-list-item,
+.b3-dialog--open .fn__flex .b3-list--background,.b3-dialog--open .fn__flex .b3-list-item {
 	border-bottom:1px solid rgba(230,230,230,.15);
 }
 /**笔记本名称加强**/
@@ -403,9 +404,6 @@ body {
 .b3-list--background .b3-list-item--focus:not([data-treetype="outline"]) {
 	color:var(--b3-theme-primary);
 }
-.b3-dialog--open .fn__flex .b3-list--background,.b3-dialog--open .fn__flex .b3-list-item {
-	border-bottom:none;
-}
 .b3-dialog__scrim {
 	background-color:rgb(0 0 0 / 0%);
 }
@@ -423,10 +421,6 @@ body {
 .search__header .b3-text-filed--text {
 	background-color:var(--dialog-background);
 	border-bottom:1px solid var(--b3-theme-primary-lighter) !important;
-}
-div#searchList {
-	column-count:2;
-	background:#00000005;
 }
 /***弹出页面***/
 .block__popover {
@@ -633,7 +627,6 @@ body.body--win32 {
 	font-style:normal;
 }
 .layout-tab-bar .item__text {
-	border-bottom:3px solid transparent;
 	padding:2px;
 	text-overflow:ellipsis;
 	opacity:0.6;
