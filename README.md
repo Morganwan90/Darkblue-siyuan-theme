@@ -1,5 +1,3 @@
-![preview](https://user-images.githubusercontent.com/61633409/151134755-0a657649-6e47-46df-8aba-6efc4942574c.png)
-
 # 介绍
 
 该主题参考了集市中前期包括langzhou、VIWZ、Achuan2各位大大的样式，各位主题作者同样细心解答了我的问题，万分感谢
