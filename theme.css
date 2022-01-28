@@ -119,7 +119,7 @@
 	--b3-protyle-search-border-color:#486a51;
 	--b3-protyle-search-current-background:#204282;
 	/* 代码片段背景 */
-    --b3-protyle-code-background:rgba(240,246,252,.15);
+    --b3-protyle-code-background:var(--b3-theme-primary-lightest);
 	/* 所见即所得行内元素颜色 */
     --b3-protyle-inline-strong-color:inherit;
 	/* 粗体 */
@@ -176,7 +176,7 @@
 	/*背景栏*/
     --background2:rgba(16,22,31,.90);
 	/*主编辑栏背景栏*/
-    --list-border-initial:var(--b3-font-color9);
+    --list-border-initial:rgb(57, 88, 119);
 	/*列表大纲线颜色*/
     --list-border-focus:var(--b3-font-color12);
 	/*子弹着重线颜色*/
@@ -221,7 +221,7 @@
 	/* 背景图片模糊程度,因性能原因已暂时取消*/
     --glass-editor-background:rgba(0,0,0,20%);
 	/* 毛玻璃效果：背景色,因性能原因已暂时取消*/
-    --glass-box-shadow:0 4px 12px rgba(120,120,120,0.35);
+    --glass-box-shadow:0 4px 12px rgba(120,120,120,0.25);
 	/* 毛玻璃效果：阴影 */
 
     /**** 动画 ****/
@@ -444,10 +444,10 @@ body {
 
 .protyle-icons>span {
 	background-color:#00000000;
+	color:var(--b3-theme-primary);
 }
 .protyle-icons>span:hover {
-	color:var(--b3-theme-background);
-	background-color:#0000001a;
+	background-color: var(--b3-theme-primary-lighter);
 }
 .config-account__center--text {
 	background-color:#00000000;
@@ -669,7 +669,7 @@ body.body--win32 {
 /* 弹出工具条字体颜色选择 */
 .b3-color__square[data-type="color"] {
 	background:no-repeat round url("img/font-c.svg");
-	box-shadow:none;
+    box-shadow: 0 0 0 1.5px var(--b3-border-color) inset;
 }
 .b3-color__square[data-type="backgroundColor"] {
 	background:no-repeat round url("img/font-b.svg");
@@ -856,7 +856,7 @@ to {
 }
 .protyle-wysiwyg u,.b3-typography u {
 	text-decoration:none;
-	border-bottom:1px solid var(--b3-theme-on-background);
+	border-bottom:1px solid var(--b3-theme-on-background) !important;
 	border-color:inherit;
 	padding:2px 0;
 }
@@ -864,6 +864,7 @@ to {
 .b3-typography code:not(.hljs),.protyle-wysiwyg code:not(.hljs) {
 	font-size:90%;
 	color:var(--inline-code-color);
+	background-color: var(--b3-theme-primary-lighter);
 }
 /**** 数学公式 ****/
 
@@ -957,18 +958,20 @@ to {
 }
 /****标题格式****/
 .protyle-wysiwyg [data-node-id].h1,.b3-typography h1 {
+	position:relative;
 	text-align:center;
+	font-size:1.75em;
+	min-height: 1.75em;
 	padding:2px 0px 0px 7px;
 	margin-bottom:15px;
 	border-bottom:4px double var(--b3-theme-primary) !important;
-	font-size:1.75em;
 	color:var(--b3-theme-primary);
 }
 .protyle-wysiwyg [data-node-id].h2,.b3-typography h2 {
 	position:relative;
-	font-size:1.5em;
-	line-height:1.25em;
 	text-align:justify;
+	font-size:1.5em;
+	min-height: 1.75em;
 	padding:2px 0px 0px 7px;
 	margin-bottom:10px;
 	border-bottom:3px solid var(--b3-theme-secondary) !important;
@@ -976,60 +979,66 @@ to {
 }
 .protyle-wysiwyg [data-node-id].h3,.b3-typography h3 {
 	position:relative;
-	font-size:1.35em;
-	line-height:1.25em;
 	text-align:justify;
+	font-size:1.35em;
+	min-height: 1.75em;
 	padding:2px 0px 0px 10px;
 	margin-bottom:10px;
 	color:var(--b3-font-color10);
 }
 .protyle-wysiwyg [data-node-id].h3:before{
+	position:absolute;
 	content: "";
 	width: 7px;
 	height: 100%;
 	top: 0;
-	left: -1.5px;
-	position:absolute;
+	left: -2.5px;
 	background-color: var(--b3-font-color10);
 	border-radius: 10px;
 }
 .protyle-wysiwyg [data-node-id].h4,.b3-typography h4 {
 	position:relative;
-	font-size:1.2em;
-	line-height:1.25em;
 	text-align:justify;
+	font-size:1.2em;
+	min-height:1.75em;
 	padding:2px 0px 0px 10px;
 	margin-bottom:5px;
 	color:var(--b3-font-color3);
 }
 .protyle-wysiwyg [data-node-id].h4:before{
+	position:absolute;
 	content: "";
 	width: 5px;
 	height: 100%;
 	top: 0;
-	left: -0.5px;
-	position:absolute;
+	left: -1.5px;
 	background-color: var(--b3-font-color3);
 	border-radius: 10px;
 }
 .protyle-wysiwyg [data-node-id].h5,.b3-typography h5 {
+	position:relative;
+	text-align:justify;
 	font-size:1.1em;
+	min-height:1.75em;
 	padding:2px 0px 0px 10px;
 	margin-bottom:5px;
 	color:var(--b3-font-color9);
 }
 .protyle-wysiwyg [data-node-id].h5:before{
+	position:absolute;
 	content: "";
 	width: 4px;
 	height: 100%;
 	top: 0;
-	left: 0;
-	position:absolute;
+	left: -0.5px;
 	background-color: var(--b3-font-color9);
 	border-radius: 10px;
 }
 .protyle-wysiwyg [data-node-id].h6,.b3-typography h6 {
+	position:relative;
+	text-align:justify;
 	font-size:1.1em;
+	min-height:1.75em;
 	padding:2px 0px 0px 7px;
 	margin-bottom:5px;
 }
@@ -1089,6 +1098,44 @@ to {
 	margin:1em 0;
 	line-height:1.625 !important;
 }
+.b3-typography .hljs, .protyle-wysiwyg .hljs{
+	background-color: var(--dialog-background);
+	box-shadow: var(--glass-box-shadow);
+}
+.code-block .protyle-icons {
+	background-color: transparent;
+	box-shadow: var(--glass-box-shadow);
+	border-radius:30px;
+}
+.code-block .protyle-icons>span{
+	height: 25px;
+}
+.protyle-linenumber__rows {
+    background-color:var(--b3-protyle-code-background);
+	width:3em;
+}
+.protyle-linenumber__rows>span::before{
+	text-align: center;
+}
+.protyle-action__language:hover{
+	color:var(--b3-font-color12) !important;
+}
+.diff .hljs-meta, .hljs-keyword, .hljs-template-tag, .hljs-type {
+	color:var(--b3-theme-primary) !important;
+}
+.hljs-attr, .hljs-link, .hljs-literal, .hljs-number, .hljs-symbol, .hljs-variable.constant_{
+	color:var(--b3-theme-secondary) !important;
+}
+.hljs-addition, .hljs-code, .hljs-string, .hljs-title.class_.inherited__{
+	color:var(--b3-font-color3) !important;
+}
+.hljs-built_in, .hljs-doctag, .hljs-keyword.hljs-atrule, .hljs-quote, .hljs-regexp{
+	color:var(--b3-font-color8) !important;
+}
+.hljs-comment{
+	color:var(--b3-font-color9) !important;
+}
+
 /**** 表格 ****/
 /* 去除默认背景色 */
  .b3-typography table tbody tr:nth-child(n),.protyle-wysiwyg table tbody tr:nth-child(n) {
