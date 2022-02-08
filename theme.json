@@ -1,7 +1,7 @@
 {
-  "name":   "Light-Blue",
+  "name":   "Dark-Blue",
   "author": "Morgan",
-  "url": "https://github.com/Morganwan90/Lightblue-siyuan-theme/",
+  "url": "https://github.com/Morganwan90/Darkblue-siyuan-theme",
   "version": "2.0.0.2",
-  "modes": ["light"]
+  "modes": ["dark"]
 }
