@@ -46,8 +46,8 @@
 	/* 提示 */
     --b3-tooltips-color:var(--b3-theme-primary-lighter);
 	/* 卡片背景 */
-    --b3-card-error-color:#6D2833;
-	--b3-card-error-background:#d8b0ae;
+    --b3-card-error-color:hsl(350, 46%, 29%);
+	--b3-card-error-background:rgb(215, 175, 172);
 	--b3-card-warning-color:#6D360B;
 	--b3-card-warning-background:#dac28b;
 	--b3-card-info-color:#084970;
@@ -55,32 +55,32 @@
 	--b3-card-success-color:#073E26;
 	--b3-card-success-background:#A2D1BC;
 	/* 自定义文字 */
-    --b3-font-color1:#81ecec;
-	--b3-font-color2:#00cec9;
-	--b3-font-color3:#00b894;
-	--b3-font-color4:#2dc653;
-	--b3-font-color5:#ffdd59;
-	--b3-font-color6:#ffd32a;
-	--b3-font-color7:#ff7675;
-	--b3-font-color8:#e55039;
-	--b3-font-color9:#74b9ff;
+    --b3-font-color1:#26c6da;
+	--b3-font-color2:#80cbc4;
+	--b3-font-color3:#69f0ae;
+	--b3-font-color4:#00c853;
+	--b3-font-color5:#ffd32a;
+	--b3-font-color6:#ffee58;
+	--b3-font-color7:#e57373;
+	--b3-font-color8:#ef5350;
+	--b3-font-color9:#64b5f6;
 	--b3-font-color10:#4285f4;
-	--b3-font-color11:#ffa801;
-	--b3-font-color12:#f3722c;
-	--b3-font-color13:#d2dae2;
-	--b3-font-background1:#03b4919c;
-	--b3-font-background2:#00cec9a1;
-	--b3-font-background3:#0985e3e8;
-	--b3-font-background4:#6c5ce7e1;
-	--b3-font-background5:#b2bec373;
-	--b3-font-background6:#f6a104c0;
-	--b3-font-background7:#e17155d2;
-	--b3-font-background8:#e55039d7;
-	--b3-font-background9:#4a69bda1;
-	--b3-font-background10:#0a3d62;
-	--b3-font-background11:#f78fb3e7;
-	--b3-font-background12:#e66767;
-	--b3-font-background13:#85bbdcc5;
+	--b3-font-color11:#ffa000;
+	--b3-font-color12:#ff6f00;
+	--b3-font-color13:#bdbdbd;
+	--b3-font-background1:#b2ebf2;
+	--b3-font-background2:#b2dfdb;
+	--b3-font-background3:#a5d6a7;
+	--b3-font-background4:#A2D1BC;
+	--b3-font-background5:#ffe082;
+	--b3-font-background6:#ffb74d;
+	--b3-font-background7:#ffab91;
+	--b3-font-background8:#ef9a9a;
+	--b3-font-background9:#b3e5fc;
+	--b3-font-background10:#90caf9;
+	--b3-font-background11:#f48fb1;
+	--b3-font-background12:#b39ddb;
+	--b3-font-background13:#b0bec5;
 	/* 动画效果 */
     --b3-transition:all .15s cubic-bezier(0,0,.2,1) 0ms;
 	--b3-width-transition:width .15s cubic-bezier(0,0,.2,1) 0ms;
@@ -438,6 +438,7 @@ body {
 	border-radius:15px;
 	box-shadow:var(--b3-dialog-shadow);
 }
+
 .protyle-background {
 	margin:10px;
 	border-radius:8px;
@@ -691,6 +692,46 @@ body.body--win32 {
 }
 .b3-color__square[data-type="color"]:hover,.b3-color__square[data-type="backgroundColor"]:hover {
 	border:1px dashed var(--b3-theme-primary);
+}
+/* 背景颜色字体设置为彩虹色 */
+strong[style="background-color: var(--b3-font-background1);"] {
+	color:#006064 !important;
+}
+strong[style="background-color: var(--b3-font-background2);"] {
+	color: #004d40 !important;
+}
+strong[style="background-color: var(--b3-font-background3);"] {
+	color: #1b5e20 !important;
+}
+strong[style="background-color: var(--b3-font-background4);"] {
+	color: #33691e !important;
+}
+strong[style="background-color: var(--b3-font-background5);"] {
+	color: #816104 !important;
+}
+strong[style="background-color: var(--b3-font-background6);"] {
+	color: #915b0b !important;
+}
+strong[style="background-color: var(--b3-font-background7);"] {
+	color: #7c2b12 !important;
+}
+strong[style="background-color: var(--b3-font-background8);"] {
+	color: #943737 !important;
+}
+strong[style="background-color: var(--b3-font-background9);"] {
+	color: #3f728a !important;
+}
+strong[style="background-color: var(--b3-font-background10);"] {
+	color: #38668b !important;
+}
+strong[style="background-color: var(--b3-font-background11);"] {
+	color: #7c2b46 !important;
+}
+strong[style="background-color: var(--b3-font-background12);"] {
+	color: #402d63 !important;
+}
+strong[style="background-color: var(--b3-font-background13);"] {
+	color: #324853 !important;
 }
 /**** 头图工具栏 ****/
 .protyle-icons {
