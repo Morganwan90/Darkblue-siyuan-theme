@@ -46,8 +46,8 @@
 	/* 提示 */
     --b3-tooltips-color:var(--b3-theme-primary-lighter);
 	/* 卡片背景 */
-    --b3-card-error-color:hsl(350, 46%, 29%);
-	--b3-card-error-background:rgb(215, 175, 172);
+    --b3-card-error-color:#6c2833;
+	--b3-card-error-background:#d7afac;
 	--b3-card-warning-color:#6D360B;
 	--b3-card-warning-background:#dac28b;
 	--b3-card-info-color:#084970;
@@ -70,14 +70,14 @@
 	--b3-font-color13:#bdbdbd;
 	--b3-font-background1:#b2ebf2;
 	--b3-font-background2:#b2dfdb;
-	--b3-font-background3:#a5d6a7;
-	--b3-font-background4:#A2D1BC;
+	--b3-font-background3:#e4f8e4;
+	--b3-font-background4:#c9f3c9;
 	--b3-font-background5:#ffe082;
 	--b3-font-background6:#ffb74d;
-	--b3-font-background7:#ffab91;
-	--b3-font-background8:#ef9a9a;
+	--b3-font-background7:#ffeacc;
+	--b3-font-background8:#fbd5d0;
 	--b3-font-background9:#b3e5fc;
-	--b3-font-background10:#90caf9;
+	--b3-font-background10:#d0e8fb;
 	--b3-font-background11:#f48fb1;
 	--b3-font-background12:#b39ddb;
 	--b3-font-background13:#b0bec5;
@@ -172,9 +172,9 @@
 	/* 边栏内滚动条通用背景色 */
     --column-scrollbar-hover-background:var(--b3-theme-primary-light);
 	/* 边栏内滚动条悬浮时背景色 */
-    --dialog-background:#10161f;
+    --dialog-background:rgb(22, 29, 43);
 	/*背景栏*/
-    --background2:rgba(16,22,31,.90);
+    --background2:rgba(22, 29, 43, 0.98);
 	/*主编辑栏背景栏*/
     --list-border-initial:rgb(57, 88, 119);
 	/*列表大纲线颜色*/
@@ -335,18 +335,15 @@ option {
 .layout__resize--lr:after {
 	background-color:var(--column-border);
 }
-
-
 body {
 	background-color:#000000;
 	background-image:var(--background-image);
 	background-position:center top;
 	background-size:cover;
 }
-
-
 .fn__flex-1.fn__flex [data-type='wnd'] {
-	background:var(--dialog-background);
+	background:var(--background2);
+	/* background:transparent; */
 	min-height:90% !important;
 	margin:5px;
 	padding:5px;
@@ -356,6 +353,15 @@ body {
 	box-sizing:border-box;
 	border-radius:15px;
 }
+/* 毛玻璃特效
+.fn__flex-1.fn__flex [data-type='wnd']:before {
+	content: "";
+	position: absolute;
+	top: 0;	left: 0; right: 0;	bottom: 0;
+	z-index: -3;
+	background-color: rgba(0,0,0,0.2);
+	backdrop-filter: blur(20px);
+} */
 .layout__center .fn__flex-1.fn__flex [data-type='wnd'] {
 	margin:5px auto;
 	padding:5px 5px;
@@ -704,28 +710,28 @@ strong[style="background-color: var(--b3-font-background3);"] {
 	color: #1b5e20 !important;
 }
 strong[style="background-color: var(--b3-font-background4);"] {
-	color: #33691e !important;
+	color: #1e4620 !important;
 }
 strong[style="background-color: var(--b3-font-background5);"] {
 	color: #816104 !important;
 }
 strong[style="background-color: var(--b3-font-background6);"] {
-	color: #915b0b !important;
+	color: #5c3b09 !important;
 }
 strong[style="background-color: var(--b3-font-background7);"] {
-	color: #7c2b12 !important;
+	color: #6D360B !important;
 }
 strong[style="background-color: var(--b3-font-background8);"] {
-	color: #943737 !important;
+	color: #611a15 !important;
 }
 strong[style="background-color: var(--b3-font-background9);"] {
 	color: #3f728a !important;
 }
 strong[style="background-color: var(--b3-font-background10);"] {
-	color: #38668b !important;
+	color: #205883 !important;
 }
 strong[style="background-color: var(--b3-font-background11);"] {
-	color: #7c2b46 !important;
+	color: #350d1a !important;
 }
 strong[style="background-color: var(--b3-font-background12);"] {
 	color: #402d63 !important;
