@@ -218,9 +218,9 @@
     --background-image:url(img/bg.jpg);
 	/* 背景图 */
     --blur-value:20px;
-	/* 背景图片模糊程度,因性能原因已暂时取消*/
+	/* 背景图片模糊程度*/
     --glass-editor-background:rgba(0,0,0,20%);
-	/* 毛玻璃效果：背景色,因性能原因已暂时取消*/
+	/* 毛玻璃效果*/
     --glass-box-shadow:0 4px 12px rgba(120,120,120,0.25);
 	/* 毛玻璃效果：阴影 */
 
@@ -341,9 +341,9 @@ body {
 	background-position:center top;
 	background-size:cover;
 }
+/*****************************************正常特效，和毛玻璃只能选一个注释*********************
 .fn__flex-1.fn__flex [data-type='wnd'] {
-	background:var(--background2);
-	/* background:transparent; */
+	background:var(--dialog-background);
 	min-height:90% !important;
 	margin:5px;
 	padding:5px;
@@ -353,15 +353,48 @@ body {
 	box-sizing:border-box;
 	border-radius:15px;
 }
-/* 毛玻璃特效
-.fn__flex-1.fn__flex [data-type='wnd']:before {
+.b3-menu,.protyle-util {
+	padding:10px 0px;
+	background-color:var(--dialog-background);
+}
+/*****************************************正常特效结束*****************************************/
+
+/*****************************************毛玻璃特效部分*****************************************/
+.fn__flex-1.fn__flex [data-type='wnd'] {
+	background:transparent;
+	min-height:90% !important;
+	margin:5px;
+	padding:5px;
+	position:relative;
+	box-shadow:0px 0px 40px 8px rgba(66,133,244,0.10);
+	overflow:hidden;
+	box-sizing:border-box;
+	border-radius:15px;
+}
+.block__popover,.protyle[data-index="0"]  {
+	background:transparent;
+}
+.block__popover:before,.fn__flex-1.fn__flex [data-type='wnd']:before {
 	content: "";
 	position: absolute;
 	top: 0;	left: 0; right: 0;	bottom: 0;
 	z-index: -3;
-	background-color: rgba(0,0,0,0.2);
-	backdrop-filter: blur(20px);
-} */
+	background-color: var(--glass-editor-background);
+	backdrop-filter: blur(var(--blur-value));
+}
+.b3-menu,.protyle-util {
+	padding:10px 0px;
+	background-color: var(--glass-editor-background);
+	backdrop-filter: blur(var(--blur-value));
+}
+/*****************************************毛玻璃特效结束*****************************************/
+.block__popover.block__popover--move.block__popover--open {
+	border-radius:15px;
+	box-shadow:var(--b3-dialog-shadow);
+}
+.fullscreen {
+	background-color:var(--dialog-background) !important;
+}
 .layout__center .fn__flex-1.fn__flex [data-type='wnd'] {
 	margin:5px auto;
 	padding:5px 5px;
@@ -436,15 +469,6 @@ body {
 .spread-search__preview {
 	border-top: 1px solid var(--b3-theme-primary);
 }
-/***弹出页面***/
-.block__popover {
-	background-color:var(--dialog-background);
-}
-.block__popover.block__popover--move.block__popover--open {
-	border-radius:15px;
-	box-shadow:var(--b3-dialog-shadow);
-}
-
 .protyle-background {
 	margin:10px;
 	border-radius:8px;
@@ -481,7 +505,7 @@ body {
 body.body--win32 {
 	border:0px solid var(--b3-border-color);
 }
-/******** 毛玻璃效果实验功能代码结束 ***************/
+
 
 
 /**** 反链面板 ****/
@@ -490,10 +514,6 @@ body.body--win32 {
 
 
 /**** 菜单 ****/
-.b3-menu,.protyle-util {
-	padding:10px 0px;
-	background-color:var(--dialog-background);
-}
 /* 菜单项 */
 .b3-menu__item {
 	padding:2px 16px 2px 16px;
@@ -629,7 +649,6 @@ body.body--win32 {
 .layout__center .layout-tab-bar {
 	background:transparent;
 	padding:0 4px;
-	border:none;
 }
 .layout__center .layout-tab-bar .item:hover {
 	background-color:transparent;
@@ -778,9 +797,7 @@ strong[style="background-color: var(--b3-font-background13);"] {
 	background-color:var(--b3-theme-primary);
 	color:var(--b3-theme-surface);
 }
-.fullscreen {
-	background-color:var(--dialog-background) !important;
-}
+
 /**** 其他 ****/
 /* 大文件分页加载条 */
 .protyle-scroll {
@@ -805,8 +822,9 @@ strong[style="background-color: var(--b3-font-background13);"] {
 	background-color:transparent;
 }
 /* 隐藏空白行的提示文字 */
-.protyle-wysiwyg [data-node-id] [spellcheck="false"]:focus:empty:after {
-	content:'';
+.protyle-wysiwyg [data-node-id] [spellcheck="false"]:empty:after {
+	content:'•';
+	opacity: 0.3;
 }
 /************** 三、编辑器行内样式 ***********************/
 
@@ -1318,6 +1336,6 @@ to {
 .side-panel {
 	background-color:var(--dialog-background);
 }
-.protyle {
-	background-color:rgba(16,22,31,0.75);
+#editor {
+	background:var(--dialog-background);
 }
