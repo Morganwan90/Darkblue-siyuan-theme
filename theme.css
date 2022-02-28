@@ -404,7 +404,7 @@ body {
 }
 /**修改内容**/
 .spread-search__preview {
-	background-color:#464d55;
+	background-color:var(--dialog-background);
 }
 .protyle-toolbar {
 	background-color:var(--glass-editor-background);
