@@ -1213,6 +1213,10 @@ to {
 .b3-typography table tr:hover,.protyle-wysiwyg table tr:hover {
 	background-color:#4285f433 !important;
 }
+.protyle-wysiwyg table, .b3-typography table{
+	display: table;
+    width: 100%;
+}
 /**大纲**/
 /***基础线条***/
 .protyle-wysiwyg [data-node-id].li>[data-node-id]:before {
