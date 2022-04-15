@@ -264,7 +264,7 @@ option {
 	color:var(--b3-font-color10);
 }
 .file-tree ul.b3-list.b3-list--background [data-subtype="h4"] .b3-list-item__text,.file-tree ul.b3-list.b3-list--background [data-subtype="h4"] .b3-list-item__toggle,.file-tree ul.b3-list.b3-list--background [data-subtype="h4"] {
-	color:var(--b3-font-color3);
+	color:var(--b3-font-color7);
 }
 .file-tree ul.b3-list.b3-list--background [data-subtype="h5"] .b3-list-item__text,.file-tree ul.b3-list.b3-list--background [data-subtype="h5"] .b3-list-item__toggle,.file-tree ul.b3-list.b3-list--background [data-subtype="h5"] {
 	color:var(--b3-font-color9);
@@ -275,14 +275,25 @@ option {
 	color:var(--b3-theme-on-surface);
 }
 .b3-list-item{
-	min-height: 32px;
+	min-height: 34px;
 }
 /* 边栏分割线 */
 .layout__resize--lr {
-	margin:14px;
+	margin:12px;
 }
 .layout__resize--lr:after {
-	background-color:var(--column-border);
+	width:3px;
+	background-color:transparent;
+	transition:all 0.8s;
+}
+.counter, .protyle-attr--refcount{
+	height: 20px;
+    width: 20px;
+    padding: 0;
+    line-height: 20px;
+	text-align: center;
+	color:var(--b3-theme-primary);
+	font-weight: 600;
 }
 body.fn__flex-column {
     background-image: var(--background-image);
@@ -428,9 +439,6 @@ div.b3-dialog__container {
 .search__header .b3-text-field--text {
 	background-color: transparent;
 }
-.spread-search__preview {
-	border-top: 1px solid var(--b3-theme-primary);
-}
 .protyle-background {
 	margin:10px;
 	border-radius:8px;
@@ -569,8 +577,8 @@ body.body--win32 {
 	min-height:0px;
 }
 /************** 二、文档编辑区 **************************/
+/** 页签样式**/ 
 .layout__center .layout-tab-bar {
-	background:transparent;
 	padding:0 4px;
 	border:none;
 }
@@ -578,27 +586,29 @@ body.body--win32 {
 	background-color:transparent;
 }
 .layout__center .layout-tab-bar .item__text:hover {
-	color:var(--b3-font-color9);
+	color:var(--b3-font-color10);
 	opacity: 0.8;
 }
-/** 页签样式-下划线**/
  .layout-tab-bar .item {
-	margin:0px 3px;
+	 line-height: 30px;
+	margin:0 1px;
 	padding:0 2px;
-	background-color:transparent;
-	border-bottom:1px solid var(--b3-font-color9);
 	box-shadow:none;
 	font-style:normal;
+	border-bottom:2px solid transparent;
+	transition: all 0.5s;
 }
 .layout-tab-bar .item__text {
 	padding:2px;
 	text-overflow:ellipsis;
 	opacity:0.6;
 	color:var(--b3-theme-on-background);
+	font-size:16px;
 }
 .layout-tab-bar .item--focus {
-	border-bottom:3px solid var(--b3-theme-primary)!important;
-	box-shadow: none !important;
+	box-shadow:none !important;
+	background-color: transparent;
+	border-bottom: 2px solid var(--b3-theme-primary);
 }
 .layout__wnd--active .layout-tab-bar .item--focus>.item__text {
 	opacity:1;
@@ -733,7 +743,7 @@ strong[style="background-color: var(--b3-font-background13);"] {
 	background-color: var(--b3-theme-primary-lightest);
 }
 /**** 其他 ****/
-/* 大文件分页加载条 */
+/* 大文件分页加载条
 .protyle-scroll {
 	opacity:0;
 	transition:var(--page-scrollbar-transition);
@@ -741,7 +751,7 @@ strong[style="background-color: var(--b3-font-background13);"] {
 .protyle-scroll:hover {
 	visibility:visible;
 	opacity:1;
-}
+} */
 /* 编辑器光标颜色 */
 .protyle-wysiwyg {
 	caret-color:var(--b3-theme-primary);
@@ -823,7 +833,10 @@ to {
 	font-weight:bold;
 }
 /**利用mark作为挖空处理结束 **/
-
+/*键盘kbd*/
+.b3-typography kbd, .protyle-wysiwyg kbd {
+	background-color:#FFFFFF06;
+}
 /***标签样式***/
 .protyle-wysiwyg [data-node-id] span[data-type="tag"] {
 	border-bottom:transparent;
@@ -910,7 +923,7 @@ to {
 	font-size:1.75em;
 	padding:2px 0px 0px 7px;
 	margin-bottom:10px;
-	border-bottom:4px double var(--b3-theme-primary) !important;
+	border-bottom:3px double var(--b3-theme-primary) !important;
 	color:var(--b3-theme-primary);
 }
 .protyle-wysiwyg [data-node-id].h2,.b3-typography h2 {
@@ -919,7 +932,7 @@ to {
 	font-size:1.5em;
 	padding:2px 0px 0px 7px;
 	margin-bottom:10px;
-	border-bottom:3px solid var(--b3-theme-secondary) !important;
+	border-bottom:2px solid var(--b3-theme-secondary) !important;
 	color:var(--b3-theme-secondary);
 }
 .protyle-wysiwyg [data-node-id].h3,.b3-typography h3 {
@@ -947,7 +960,7 @@ to {
 	min-height:1.25em;
 	padding:2px 0px 0px 10px;
 	margin-bottom:5px;
-	color:var(--b3-font-color3);
+	color:var(--b3-font-color7);
 }
 .protyle-wysiwyg [data-node-id].h4:before{
 	position:absolute;
@@ -1033,8 +1046,6 @@ to {
 	border-left:var(--quote-border-width) solid var(--quote-border-color);
 	color:var(--b3-theme-on-surface);
 	background-color:var(--b3-theme-primary-lightest);
-	margin:1em 2em 1em 2em;
-	padding:0px 4px 0px 1em;
 }
 /**** 代码块 ****/
 .b3-typography .code-block,.protyle-wysiwyg .code-block {
@@ -1234,16 +1245,20 @@ div[data-key] .b3-dialog__container .fn__flex-column .search__header,
 div[data-key] .b3-dialog__container .fn__flex-column .b3-form__space--small {
 	width:100vw;
 }
-
+.b3-form__space--small{
+	margin:0px;
+	padding: 8px 16px;
+	border-bottom:1px solid var(--b3-theme-primary);
+}
 /*搜索结果列表占一半宽度，靠左排列*/
 div[data-key] .b3-dialog__container .fn__flex-column #searchList {
 	float:left;
 	width:calc(50%);
 	height:calc(100%) !important;
-	border-top:1px solid var(--b3-theme-primary);
 	border-right:1px solid var(--b3-theme-primary);
 }
 .b3-list-item__meta {
 	color:var(--b3-theme-primary-light);
+	text-align: justify;
 }
 /*---------ctrl+p窗口改造 end -------------*/
