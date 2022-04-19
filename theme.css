@@ -1305,7 +1305,7 @@ div[data-key] .b3-dialog__container .fn__flex-column #searchList {
 	padding:5px 10px;
 	margin-top:2px;
 	border-radius:7px;
-	box-shadow: var(--list-border-initial) 0px 0px 0px 1px, rgba(15, 15, 15, 0.1) 0px 2px 4px;
+	box-shadow: var(--list-border-initial) 0px 0px 0px 1px, #0f0f0f1a 0px 2px 4px;
 	white-space: nowrap;
 }
 /*去除竖线*/
@@ -1393,7 +1393,7 @@ div[data-node-index]>[data-type="NodeListItem"][data-subtype="u"]:before{
 .protyle-wysiwyg *[custom-f="dt"][data-subtype="u"] .li div:hover+.list .li div>[spellcheck="false"]
 {
 	background-color:var(--b3-theme-primary-lightest)!important; 
-	box-shadow: var(--b3-theme-primary) 0px 0px 0px 1px, rgba(15, 15, 15, 0.1) 0px 2px 4px;
+	box-shadow: var(--b3-theme-primary) 0px 0px 0px 1px, #0f0f0f1a 0px 2px 4px;
 }   
 /*继承线高亮*/
 .protyle-wysiwyg *[custom-f="dt"][data-subtype="u"] .li :hover +.list .li:after,   
@@ -1489,5 +1489,4 @@ div[data-node-index]>[data-type="NodeListItem"][data-subtype="u"]:before{
 .list[data-node-id][data-type="NodeList"][custom-f="bg"] .protyle-action>svg {
     width: 10px;
 }
-
 /* ---------------------------------------------------------列表转化为表格 END-------------------------------------------------- */
