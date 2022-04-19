@@ -1003,15 +1003,15 @@ to {
 	height:100% !important;
 }
 /**标题线**/
-.protyle-wysiwyg [data-node-id].li>[data-node-id][data-subtype="h3"]::before {
+.protyle-wysiwyg [data-node-id].li>[data-node-id][data-subtype="h3"]:before {
 	border-radius:0px;
 	/*left:calc(18px * -1 - 6px);*/
 }
-.protyle-wysiwyg [data-node-id].li>[data-node-id][data-subtype="h4"]::before {
+.protyle-wysiwyg [data-node-id].li>[data-node-id][data-subtype="h4"]:before {
 	border-radius: 0px;
 	/*left:calc(18px * -1 - 4px);*/
 }
-.protyle-wysiwyg [data-node-id].li>[data-node-id][data-subtype="h5"]::before {
+.protyle-wysiwyg [data-node-id].li>[data-node-id][data-subtype="h5"]:before {
 	border-radius: 0px;
 	/*left:calc(18px * -1 - 2px);*/
 }
@@ -1069,7 +1069,7 @@ to {
     background-color:var(--b3-protyle-code-background);
 	width:3em;
 }
-.protyle-linenumber__rows>span::before{
+.protyle-linenumber__rows>span:before{
 	text-align: center;
 }
 .protyle-action__language:hover{
