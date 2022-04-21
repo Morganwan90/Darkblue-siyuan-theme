@@ -1,8 +1,19 @@
 # 介绍
 
-该主题参考了集市中前期包括[langzhou](https://github.com/langzhou/siyuan-note)、[VIWZ](https://github.com/VIWZ)、[Achuan-2](https://github.com/Achuan-2)、[Seven Chor](https://github.com/zqhjl)、[Roy](https://github.com/royc01)、[Zuoqiu-Yingyi](https://github.com/Zuoqiu-Yingyi)、[UserZYF](https://github.com/UserZYF)各位大大的样式，各位主题作者同样细心解答了我的问题，万分感谢
+该主题参考了集市中前期包括[langzhou](https://github.com/langzhou/siyuan-note)、[VIWZ](https://github.com/VIWZ)、[Zuoqiu-Yingyi](https://github.com/Zuoqiu-Yingyi)、[Achuan-2](https://github.com/Achuan-2)、[Roy](https://github.com/royc01)、[Zuoqiu-Yingyi](https://github.com/Zuoqiu-Yingyi)、[UserZYF](https://github.com/UserZYF)各位大大的样式，各位主题作者同样细心解答了我的问题，万分感谢
 
 推荐码：ildAxIu，欢迎上车~
+
+## 功能挂件原作者
+
+|     作者      |     主题     |           具体内容           |
+| :-----------: | :----------: | :--------------------------: |
+|   langzhou    |      -       |         评论注释功能         |
+| Zuoqiu-Yingyi |    Dark+     |     无序列表转脑图、表格     |
+|      Roy      | Notion-theme |     无序列表转脑图、表格     |
+|    UserZYF    | Zhang-Light  | '/'后分4栏；<br />搜索栏改造 |
+
+
 
 ## 更新历史
 
@@ -10,7 +21,7 @@
 
 ### 2020.4.17
 
-调整代码块样式，复制了[Roy](https://github.com/royc01)的无序列表转脑图、[UserZYF](https://github.com/UserZYF)的无序列表转表格
+调整代码块样式，无序列表转脑图、表格，搜索栏、'/'界面
 
 ### 2022.4.15
 
@@ -42,14 +53,16 @@
 
 优化颜色样式，添加回毛玻璃效果。
 
+
+
 ### 2022.2.16
 
 更改配色，带颜色样式不加粗
 
 ### 2022.1.27
+
 部分样式修改
 之前版本号定的太大了...重新定义
-
 
 ### 2022.1.22
 
@@ -73,15 +86,17 @@
 
 优化页签
 
-# 
-
 ### 2022.1.10
 
-#### ~~添加了子弹流加强模式 v0.1~~
+~~添加了子弹流加强模式 v0.1~~
 
 ~~根据logseq的主题作者pengx17的代码改造，效果如下：~~
 
 ![截图_20222410032423](https://user-images.githubusercontent.com/61633409/148697503-4e30d537-b1c3-44be-b199-da7fe36f6f96.gif)
+
+列表中可以同一块多行，可以无序列表、有序列表、表格、嵌入块混搭
+
+但列表不和与纯文本块混带，如果有好办法可以个联系我哈~
 
 ### 2022.1.5
 
