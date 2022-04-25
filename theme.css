@@ -1485,7 +1485,7 @@ div[data-key] .b3-dialog__container .fn__flex-column #searchList {
 /* ---------------------------------------------------------列表转化为表格 END-------------------------------------------------- */
 
 /* --------------------------------将'/'弹出的选择窗口分为4栏 From Zhang-Light---------------------------------------- */
-.b3-menu.b3-list.b3-list--background {
+.b3-menu.b3-list.b3-list--background.hint--menu {
     column-count: auto;
     column-width: 148px !important;
     column-gap: 5px;
