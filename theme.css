@@ -14,7 +14,7 @@
 
 :root {
 	/* 主色 */
-    --b3-theme-primary:rgb(66, 134, 243);
+    --b3-theme-primary:#4286f3;
 	/* 主色调，一般用在按钮等其他需要醒目的地方 */
     --b3-theme-primary-light:#4286F3de;
 	--b3-theme-primary-lighter:#4286F361;
@@ -314,7 +314,7 @@ body.fn__flex-column {
 }
 /*****************************************正常特效，和毛玻璃只能选一个注释*********************/
 .fn__flex-1.fn__flex [data-type='wnd'] {
-	background:rgba(22, 29, 43,0.5);
+	background:#161d2b80;
 	min-height:90% !important;
 	margin:5px;
 	padding:5px;
@@ -326,7 +326,7 @@ body.fn__flex-column {
 }
 .b3-menu,.protyle-util {
 	padding:10px 0px;
-	background-color:rgba(22, 29, 43,0.95);
+	background-color:#161d2bf2;
 }
 .b3-menu__item--show .b3-menu__submenu {
 	background-color:var(--dialog-background);

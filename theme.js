@@ -202,11 +202,3 @@ function ViewMonitor(event){
 }
 
 setTimeout(()=>ClickMonitor(),1000)
-
-// 测试添加毛玻璃切换按钮
-function glasscss(){
-  let areas = document.querySelectorAll('.fn__flex-column .fn__flex .fn__flex-1[data-type="wnd"]')
-  console.log(areas)
-}
-
-setTimeout(()=>glasscss(),1000)
