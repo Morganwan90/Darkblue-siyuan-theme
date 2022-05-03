@@ -14,7 +14,7 @@
 
 :root {
 	/* 主色 */
-    --b3-theme-primary:#4286F3;
+    --b3-theme-primary:rgb(66, 134, 243);
 	/* 主色调，一般用在按钮等其他需要醒目的地方 */
     --b3-theme-primary-light:#4286F3de;
 	--b3-theme-primary-lighter:#4286F361;
@@ -71,7 +71,7 @@
 	--b3-font-color7:#e57373;
 	--b3-font-color8:#ef5350;
 	--b3-font-color9:#64b5f6;
-	--b3-font-color10:#4286F3;
+	--b3-font-color10:#4286f3;
 	--b3-font-color11:#ffa000;
 	--b3-font-color12:#ff6f00;
 	--b3-font-color13:#bdbdbd;
@@ -314,19 +314,22 @@ body.fn__flex-column {
 }
 /*****************************************正常特效，和毛玻璃只能选一个注释*********************/
 .fn__flex-1.fn__flex [data-type='wnd'] {
-	background:rgba(22, 29, 43,0.8);
+	background:rgba(22, 29, 43,0.5);
 	min-height:90% !important;
 	margin:5px;
 	padding:5px;
 	position:relative;
-	box-shadow:0px 0px 40px 8px #4286F31a;
+	box-shadow:var(--glass-box-shadow);
 	overflow:hidden;
 	box-sizing:border-box;
 	border-radius:15px;
 }
 .b3-menu,.protyle-util {
 	padding:10px 0px;
-	background-color:rgba(22, 29, 43,0.9);
+	background-color:rgba(22, 29, 43,0.95);
+}
+.b3-menu__item--show .b3-menu__submenu {
+	background-color:var(--dialog-background);
 }
 /*****************************************正常特效结束*****************************************/
 
@@ -337,12 +340,13 @@ body.fn__flex-column {
 	margin:5px;
 	padding:5px;
 	position:relative;
-	box-shadow:0px 0px 40px 8px #4286F31a;
+	box-shadow:var(--glass-box-shadow);
 	overflow:hidden;
 	box-sizing:border-box;
 	border-radius:15px;
 	z-index: 2;
 }
+
 .block__popover,.protyle[data-index="0"]  {
 	background:transparent;
 }
@@ -359,6 +363,7 @@ body.fn__flex-column {
 	background-color: var(--glass-editor-background);
 	backdrop-filter: blur(var(--blur-value));
 }
+
 /*****************************************毛玻璃特效结束*****************************************/
 .block__popover.block__popover--move.block__popover--open {
 	border-radius:15px;
@@ -600,8 +605,8 @@ body.body--win32 {
 	color:var(--b3-font-color10);
 	opacity: 0.8;
 }
- .layout-tab-bar .item {
-	 line-height: 30px;
+.layout-tab-bar .item {
+	line-height: 30px;
 	margin:0 1px;
 	padding:0 2px;
 	box-shadow:none;
@@ -725,7 +730,7 @@ strong[style="background-color: var(--b3-font-background13);"] {
 /**** 块图标 ****/
 /* 减淡块图标颜色 */
 .protyle-gutters svg {
-	color:#4286F3b3;
+	color:#4286f3cc;
 }
 /* 增加块图标悬浮时背景色 */
 .protyle-gutters button:hover svg {
@@ -768,9 +773,12 @@ strong[style="background-color: var(--b3-font-background13);"] {
 	caret-color:var(--b3-theme-primary);
 }
 /* 文本选中样式 */
-.protyle-wysiwyg--select, .protyle-wysiwyg--select .hljs, .protyle-wysiwyg--select .protyle-linenumber__rows {
-	background-color:var(--b3-theme-primary-lightest) !important;
+.protyle-wysiwyg--select, .protyle-wysiwyg--select .hljs, .protyle-wysiwyg--select .protyle-linenumber__rows, .protyle-wysiwyg--hl {
+	/* background-color:var(--b3-theme-primary-lightest) !important; */
+	background:none !important;
+	outline:1px dashed var(--b3-theme-primary);
 }
+
 /* 隐藏空白行的提示文字 */
 .protyle-wysiwyg [data-node-id] [spellcheck="false"]:empty:after {
 	content:'•';
@@ -1093,7 +1101,7 @@ to {
 	color:var(--b3-theme-secondary) !important;
 }
 .hljs-addition, .hljs-code, .hljs-string, .hljs-title.class_.inherited__{
-	color:var(--b3-font-color3) !important;
+	color:var(--b3-font-color7) !important;
 }
 .hljs-built_in, .hljs-doctag, .hljs-keyword.hljs-atrule, .hljs-quote, .hljs-regexp{
 	color:var(--b3-font-color8) !important;
@@ -1351,14 +1359,14 @@ div[data-key] .b3-dialog__container .fn__flex-column #searchList {
 }
 /*上直线*/
 .protyle-wysiwyg *[custom-type="graph"] [data-node-id].li:before{   
-    top: 50%;
+    top: calc(50% - 1px);
     border-top: 2px solid var(--b3-theme-primary);
-	bottom:1%;
+
 }
 /*下直线*/
 .protyle-wysiwyg *[custom-type="graph"] [data-node-id].li:after{   
     border-bottom: 2px solid var(--b3-theme-primary);
-	top:0;
+	top:-1px;
 }
 /* 后继承线 */
 .protyle-content *[custom-type="graph"] [data-node-id].list:after{
@@ -1414,7 +1422,22 @@ div[data-key] .b3-dialog__container .fn__flex-column #searchList {
 .protyle-wysiwyg *[custom-type="graph"][data-node-id] .li :hover +.list:after,      
 .protyle-wysiwyg *[custom-type="graph"][data-node-id] .li :hover +.list .list:after{   
     border-color:var(--b3-theme-secondary) !important;
-}  
+} 
+.protyle-wysiwyg *[custom-type="graph"] [data-node-id].li div>div[spellcheck="false"]:hover{
+	outline: 2px solid var(--b3-theme-secondary);
+}
+/**高亮位置修正**/
+.protyle-wysiwyg *[custom-type="graph"][data-node-id] .li :hover +.list .li:before {
+	top:50%;
+}
+.protyle-wysiwyg *[custom-type="graph"][data-node-id] .li :hover +.list .li:after {
+	top:0;
+}
+.protyle-wysiwyg *[custom-type="graph"][data-node-id] .li :hover +.list:after,      
+.protyle-wysiwyg *[custom-type="graph"][data-node-id] .li :hover +.list .list:after{
+	top: calc(50% + 1px);
+}
+
 
 .b3-typography, .protyle-wysiwyg *[custom-type="graph"] [data-node-id]{
 	border-bottom: none !important;
@@ -1462,7 +1485,7 @@ div[data-key] .b3-dialog__container .fn__flex-column #searchList {
 /* 列表项标志居中 */
 .protyle-content *[custom-type~=table] [data-node-id].li>div.protyle-action{
     position: absolute;
-    top: calc(50% - 0.25em);
+    top: 50%;
     transform: translate(0, -50%);
 	color: var(--b3-theme-primary)
 }
@@ -1497,3 +1520,75 @@ div[data-key] .b3-dialog__container .fn__flex-column #searchList {
 .b3-menu.b3-list.b3-list--background .b3-menu__separator {
 display:none;
 }
+
+/* ————————————————————将每个项目的文字和图标大小设置更小点———————————————————— */
+/* 设置单个项目 */
+button.b3-list-item.b3-list-item--two.fn__block {
+    font-size: 90%;
+    border: var(--b3-border-column-item);
+    box-sizing: border-box;
+    vertical-align: middle;
+    padding: 2px 8px !important;
+    margin-bottom: 0.1em;
+	border-bottom: 1px solid #e6e6e626;
+}
+
+/* 设置图标颜色 */
+button.b3-list-item.b3-list-item--two.fn__block .b3-list-item__graphic {
+    color: gray;
+    position: absolute;
+    top: 8px;
+}
+
+/* 鼠标悬浮时更改图标颜色 */
+button.b3-list-item.b3-list-item--two.fn__block:hover .b3-list-item__graphic {
+    color: var(--b3-theme-primary);
+}
+
+/* 设置文本颜色 */
+button.b3-list-item.b3-list-item--two.fn__block .b3-list-item__text {
+    vertical-align: middle;
+    padding-left: 18px;
+}
+
+/* ————————————————————调整挂件和模板窗口的分栏效果，仍旧分为4栏—————————————————————————————— */
+.b3-list.fn__flex-1.b3-list--background:not(ul.b3-list.b3-list--background.fn__flex-1, div#globalSearchList) {
+    column-count: 4;
+    column-gap: 5px;
+    min-width: 50vw !important;
+    font-size: 90%;
+    border: var(--b3-border-column-item);
+}
+
+
+/* ————————————————————设置挂件和模板窗口每个项目的宽度———————————————————— */
+.b3-list.fn__flex-1.b3-list--background:not(ul.b3-list.b3-list--background.fn__flex-1, div#globalSearchList) .b3-list-item {
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ————————————————————调整emoji窗口的选择效果，向右拉动滚动条查看所有emoji———————————————————— */
+/* 控制整个表情面板是左右滑动而不是上下滑动 */
+.b3-menu.b3-list.b3-list--background .emojis__panel {
+    overflow: inherit !important;
+}
+
+/* 控制表情的内容能够正常显示而不是折叠 */
+.b3-menu.b3-list.b3-list--background .emojis__content {
+    display: block !important;
+}
+
+/* 去掉模板搜索中的空隙，修复bug */
+.protyle-util .b3-list-item {
+    padding: 0px;
+	min-height: auto !important;
+	border-bottom: none !important;
+}
+
+.b3-list.fn__flex-1.b3-list--background {
+    padding: 4px 8px;
+}
+
+/* --------------------------------将'/'弹出的选择窗口分为4栏 END-------------------------------------------------- */
