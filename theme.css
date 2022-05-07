@@ -424,7 +424,7 @@ body.fn__flex-column {
 }
 div.b3-dialog__container {
 	background-color:var(--dialog-background) !important;
-	animation:menu 0.2s ease-in-out;
+	animation:menu 0.3s ease-in-out;
 }
 .spread-search__preview {
 	background-color:var(--dialog-background);
@@ -493,7 +493,7 @@ body.body--win32 {
 /**** 菜单 ****/
 
 .b3-menu{
-	animation: menu 0.2s ease-in-out;
+	animation: menu 0.3s ease-in-out;
 }
 /* 菜单项 */
 .b3-menu__item {
