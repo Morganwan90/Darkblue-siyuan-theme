@@ -1181,9 +1181,6 @@ to {
 .protyle-wysiwyg [data-node-id].li>[data-node-id].render-node:before {
 	left:-19px  !important;
 }
-.protyle-wysiwyg [data-node-id].li>[data-node-id] {
-	margin-left:24px !important;
-}
 /******子弹流加强，根据logseq的主题作者pengx17的代码改造*******
 
 .protyle-wysiwyg [data-node-id].li>.list {
