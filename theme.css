@@ -1821,7 +1821,7 @@ div[data-key] .b3-dialog__container .fn__flex-column #searchList {
 	width: 100%;
 }
 
-/* -----测试内容---*/
+/* -----横向滚动条---*/
 .protyle-wysiwyg *[custom-type~=table][data-node-index]>div {
 	overflow: auto;
 }
