@@ -268,8 +268,8 @@ option {
     border: none;
 }
 
-.layout--float.layout__dockl {
-background: rgba(3, 3, 3, 0.85);
+.layout--float.layout__dockl,.layout--float.layout__dockr {
+background: #030303d9;
 }
 
 .docktop {
