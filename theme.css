@@ -1734,7 +1734,6 @@ div.sb div.sb>div[data-type="NodeHeading"] {
 
 .protyle-wysiwyg [data-node-id].li>.protyle-action:hover svg {
     border-color: var(--list-bullet-focus) !important;
-    background-color: var(--list-bullet-focus) !important;
 }
 
 /* 大纲折叠时样式 */
