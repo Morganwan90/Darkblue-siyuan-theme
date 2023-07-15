@@ -62,7 +62,7 @@
     --b3-tab-background: var(--b3-theme-background);
     --b3-tab-background-hover: var(--b3-theme-primary-lightest);
     /* 提示 */
-    --b3-tooltips-background: var(--b3-theme-primary-lighter);
+    --b3-tooltips-background: #22457b;
     --b3-tooltips-color: var(--b3-theme-on-background);
     /* 卡片背景 */
     --b3-card-error-color: #6c2833;
