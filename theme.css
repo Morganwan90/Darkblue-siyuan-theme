@@ -27,7 +27,7 @@
     --b3-theme-secondary: #f3722c;
     --b3-theme-background: var(--dialog-background);
     /* 背景色，主要用于编辑器背景 */
-    --b3-theme-surface: #00000033;
+    --b3-theme-background: var(--dialog-background);
     /* 主要用于分栏背景 */
     --b3-theme-surface-light: #292a2ddb;
     --b3-theme-error: #d23f31;
